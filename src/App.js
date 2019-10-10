@@ -1,12 +1,12 @@
-import React, { Component } from "react"
-import { Switch, Route } from "react-router-dom"
+import React, { Component } from 'react'
+import { Switch, Route } from 'react-router-dom'
 
-import "./App.css"
-import HomePage from "./pages/homepage/homepage.component"
-import ShopPage from "./pages/shop/shop.component"
-import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component"
-import Header from "./components/header/header.component"
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils"
+import './App.css'
+import HomePage from './pages/homepage/homepage.component'
+import ShopPage from './pages/shop/shop.component'
+import SignInAndSignUp from './pages/sign-in-and-sign-up/sign-in-and-sign-up.component'
+import Header from './components/header/header.component'
+import { auth, createUserProfileDocument } from './firebase/firebase.utils'
 
 class App extends Component {
   constructor() {
@@ -31,6 +31,7 @@ class App extends Component {
               ...snapshot.data()
             }
           })
+          console.log(this.state)
         })
       } else {
         this.setState({ currentUser: userAuth })
@@ -48,9 +49,9 @@ class App extends Component {
       <div>
         <Header currentUser={this.state.currentUser}></Header>
         <Switch>
-          <Route exact path='/' component={HomePage}></Route>
-          <Route path='/shop' component={ShopPage}></Route>
-          <Route path='/signin' component={SignInAndSignUp}></Route>
+          <Route exact path="/" component={HomePage}></Route>
+          <Route path="/shop" component={ShopPage}></Route>
+          <Route path="/signin" component={SignInAndSignUp}></Route>
         </Switch>
       </div>
     )
