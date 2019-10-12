@@ -25,7 +25,6 @@ const CartDropdown = ({ cartItems, history }) => (
     </CustomButton>
   </div>
 )
-
 const mapStateToProps = createStructuredSelector({
   cartItems: selectCartItems
 })
