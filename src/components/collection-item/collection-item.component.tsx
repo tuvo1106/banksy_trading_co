@@ -1,29 +1,32 @@
-import React from "react"
-import { connect } from "react-redux"
+import React from 'react'
+import { connect } from 'react-redux'
 
-import CustomButton from "../custom-button/custom-button.component"
-import { addItem } from "../../redux/cart/cart.actions"
-import "./collection-item.styles.scss"
+import CustomButton from '../custom-button/custom-button.component'
+import { addItem } from '../../redux/cart/cart.actions'
+
+import { cartItem } from '../../interfaces/cartItem'
+
+import './collection-item.styles.scss'
 
 interface CollectionItemProps {
-  item: {
-    name: string
-    price: number
-    imageUrl: string
-  }
-  addItem: (item: any) => any
+  item: cartItem
+  addItem: (item: cartItem) => { type: string; payload: cartItem }
 }
 
-const CollectionItem = ({ item, addItem }: CollectionItemProps) => {
+const CollectionItem = ({
+  item,
+  addItem
+}: CollectionItemProps): JSX.Element => {
   const { name, price, imageUrl } = item
   return (
-    <div className='collection-item'>
+    <div className="collection-item">
       <div
-        className='image'
-        style={{ backgroundImage: `url(${imageUrl})` }}></div>
-      <div className='collection-footer'>
-        <span className='name'>{name}</span>
-        <span className='price'>{price}</span>
+        className="image"
+        style={{ backgroundImage: `url(${imageUrl})` }}
+      ></div>
+      <div className="collection-footer">
+        <span className="name">{name}</span>
+        <span className="price">{price}</span>
       </div>
       <CustomButton onClick={() => addItem(item)} inverted>
         Add to cart
@@ -33,7 +36,7 @@ const CollectionItem = ({ item, addItem }: CollectionItemProps) => {
 }
 
 const mapDispatchtoProps = (dispatch: any) => ({
-  addItem: (item: CollectionItemProps["item"]) => dispatch(addItem(item))
+  addItem: (item: cartItem) => dispatch(addItem(item))
 })
 
 export default connect(

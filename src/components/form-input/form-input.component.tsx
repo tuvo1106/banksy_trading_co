@@ -1,6 +1,6 @@
-import React from "react"
+import React from 'react'
 
-import "./form-input.styles.scss"
+import './form-input.styles.scss'
 
 interface FormInputProps {
   label: string
@@ -12,17 +12,23 @@ interface FormInputProps {
   handleChange?: (event: any) => void
 }
 
-const FormInput = ({ handleChange, label, ...otherProps }: FormInputProps) => (
-  <div className='group'>
+const FormInput = ({
+  handleChange,
+  label,
+  ...otherProps
+}: FormInputProps): JSX.Element => (
+  <div className="group">
     <input
-      className='form-input'
+      className="form-input"
       onChange={handleChange}
-      {...otherProps}></input>
+      {...otherProps}
+    ></input>
     {label ? (
       <label
         className={`${
-          otherProps.value.length ? "shrink" : ""
-        } form-input-label`}>
+          otherProps.value.length ? 'shrink' : ''
+        } form-input-label`}
+      >
         {label}
       </label>
     ) : null}
