@@ -1,4 +1,4 @@
-export interface dbItem {
+export interface directoryItem {
   title: string
   imageUrl: string
   id: number
