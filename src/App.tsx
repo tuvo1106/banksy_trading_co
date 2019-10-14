@@ -16,25 +16,34 @@ import { auth, createUserProfileDocument } from "./firebase/firebase.utils"
 import { setCurrentUser } from "./redux/user/user.actions"
 import { selectCurrentUser } from "./redux/user/user.selector"
 
-class App extends Component {
-  unsubscribeFromAuth = null
+interface AppProps {
+  setCurrentUser: any
+  currentUser: any
+}
+
+interface AppState {}
+
+class App extends Component<AppProps, AppState> {
+  unsubscribeFromAuth: any = null
 
   componentDidMount() {
     const { setCurrentUser } = this.props
     // listen for changes on Firebase
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
-      if (userAuth) {
-        const userRef = await createUserProfileDocument(userAuth)
-        userRef.onSnapshot(snapshot => {
-          setCurrentUser({
-            id: snapshot.id,
-            ...snapshot.data()
+    this.unsubscribeFromAuth = auth.onAuthStateChanged(
+      async (userAuth: any) => {
+        if (userAuth) {
+          const userRef: any = await createUserProfileDocument(userAuth)
+          userRef.onSnapshot((snapshot: any) => {
+            setCurrentUser({
+              id: snapshot.id,
+              ...snapshot.data()
+            })
           })
-        })
-      } else {
-        setCurrentUser(userAuth)
+        } else {
+          setCurrentUser(userAuth)
+        }
       }
-    })
+    )
   }
 
   // close connection
@@ -67,8 +76,8 @@ const mapStateToProps = createStructuredSelector({
   currentUser: selectCurrentUser
 })
 
-const mapDispatchToProps = dispatch => ({
-  setCurrentUser: user => dispatch(setCurrentUser(user))
+const mapDispatchToProps = (dispatch: any) => ({
+  setCurrentUser: (user: any) => dispatch(setCurrentUser(user))
 })
 
 export default connect(
