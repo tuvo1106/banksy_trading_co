@@ -7,11 +7,7 @@ import { auth, signInWithGoogle } from "../../firebase/firebase.utils"
 
 import "./sign-in.styles.scss"
 
-interface SignInProps {
-  props: any
-}
-
-class SignIn extends Component<SignInProps, any> {
+class SignIn extends Component<any, any> {
   constructor(props: any) {
     super(props)
 

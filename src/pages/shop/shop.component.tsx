@@ -1,10 +1,14 @@
-import React, { Component } from 'react'
-import CollectionPreview from '../../components/collection-preview/collection-preview.component'
+import React, { Component } from "react"
+import CollectionPreview from "../../components/collection-preview/collection-preview.component"
 
-import SHOP_DATA from './shop.data.jsx'
+import SHOP_DATA from "./shop.data"
 
-class ShopPage extends Component {
-  constructor (props) {
+interface ShopPageState {
+  collections: any[]
+}
+
+class ShopPage extends Component<any, ShopPageState> {
+  constructor(props: any) {
     super(props)
 
     this.state = {
@@ -12,7 +16,7 @@ class ShopPage extends Component {
     }
   }
 
-  render () {
+  render() {
     const { collections } = this.state
     return (
       <div className='shop-page'>

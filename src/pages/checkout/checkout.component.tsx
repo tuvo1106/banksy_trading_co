@@ -1,17 +1,22 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
+import React from "react"
+import { connect } from "react-redux"
+import { createStructuredSelector } from "reselect"
 
 import {
   selectCartItems,
   selectCartTotal
-} from '../../redux/cart/cart.selectors'
+} from "../../redux/cart/cart.selectors"
 
-import CheckoutItem from '../../components/checkout-item/checkout-item'
+import CheckoutItem from "../../components/checkout-item/checkout-item"
 
-import './checkout.styles.scss'
+import "./checkout.styles.scss"
 
-const CheckoutPage = ({ cartItems, total }) => (
+interface CheckoutPageProps {
+  cartItems: any[]
+  total: number
+}
+
+const CheckoutPage = ({ cartItems, total }: CheckoutPageProps) => (
   <div className='checkout-page'>
     <div className='checkout-header'>
       <div className='header-block'>
