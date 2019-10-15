@@ -10,8 +10,9 @@ import "./sign-up.styles.scss"
 interface SignUpProps {}
 
 class SignUp extends Component<SignUpProps, any> {
-  constructor() {
-    super({})
+  _isMounted = false
+  constructor(props: any) {
+    super(props)
 
     this.state = {
       displayName: "",
@@ -21,8 +22,9 @@ class SignUp extends Component<SignUpProps, any> {
     }
   }
 
-  handleSubmit = async (event: any) => {
+  handleSubmit = async (event: any): Promise<any> => {
     event.preventDefault()
+    this._isMounted = true
 
     const { displayName, email, password, confirmPassword } = this.state
 
@@ -36,24 +38,27 @@ class SignUp extends Component<SignUpProps, any> {
         email,
         password
       )
-
       await createUserProfileDocument(user, { displayName })
-
-      this.setState({
-        displayName: "",
-        email: "",
-        password: "",
-        confirmPassword: ""
-      })
+      if (this._isMounted) {
+        this.setState({
+          displayName: "",
+          email: "",
+          password: "",
+          confirmPassword: ""
+        })
+      }
     } catch (error) {
       console.error(error)
     }
   }
 
-  handleChange = (event: any) => {
+  handleChange = (event: any): void => {
     const { name, value } = event.target
-
     this.setState({ [name]: value })
+  }
+
+  componentWillUnmount() {
+    this._isMounted = false
   }
 
   render() {

@@ -7,7 +7,8 @@ import { config } from "./firebase.env"
 export const createUserProfileDocument = async (
   userAuth: any,
   additionalData: any
-) => {
+): Promise<any> => {
+  console.log(userAuth)
   // user logged out
   if (!userAuth) return
   const userRef = firestore.doc(`users/${userAuth.uid}`)
