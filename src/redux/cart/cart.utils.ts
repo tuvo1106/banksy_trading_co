@@ -1,4 +1,9 @@
-export const addItemToCart = (cartItems: any[], cartItemToAdd: any): any[] => {
+import { cartItem } from '../../interfaces/cartItem'
+
+export const addItemToCart = (
+  cartItems: cartItem[],
+  cartItemToAdd: cartItem
+): cartItem[] => {
   const existingCartItem = cartItems.find(
     cartItem => cartItem.id === cartItemToAdd.id
   )
@@ -13,13 +18,13 @@ export const addItemToCart = (cartItems: any[], cartItemToAdd: any): any[] => {
 }
 
 export const removeItemFromCart = (
-  cartItems: any[],
-  cartItemToRemove: any
-): any[] => {
+  cartItems: cartItem[],
+  cartItemToRemove: cartItem
+): cartItem[] => {
   const existingCartItem = cartItems.find(
     cartItem => cartItem.id === cartItemToRemove.id
   )
-  if (existingCartItem.quantity === 1) {
+  if (existingCartItem && existingCartItem.quantity === 1) {
     return cartItems.filter(cartItem => cartItem.id !== cartItemToRemove.id)
   }
   return cartItems.map(cartItem =>

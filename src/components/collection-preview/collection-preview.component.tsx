@@ -1,12 +1,12 @@
 import React from 'react'
 import CollectionItem from '../collection-item/collection-item.component'
-import { cartItem } from '../../interfaces/cartItem'
+import { subcategory } from '../../interfaces/category'
 
 import './collection-preview.styles.scss'
 
 interface CollectionPreviewProps {
   title: string
-  items: cartItem[]
+  items: subcategory[]
 }
 
 const CollectionPreview = ({ title, items }: CollectionPreviewProps) => (
@@ -14,8 +14,8 @@ const CollectionPreview = ({ title, items }: CollectionPreviewProps) => (
     <h1 className="title">{title.toUpperCase()}</h1>
     <div className="preview">
       {items
-        .filter((item: cartItem, index: number) => index < 4)
-        .map((item: cartItem) => (
+        .filter((item: subcategory, index: number) => index < 4)
+        .map((item: subcategory) => (
           <CollectionItem key={item.id} item={item}></CollectionItem>
         ))}
     </div>

@@ -3,14 +3,14 @@ import { connect } from 'react-redux'
 
 import CustomButton from '../custom-button/custom-button.component'
 import { addItem } from '../../redux/cart/cart.actions'
-
+import { subcategory } from '../../interfaces/category'
 import { cartItem } from '../../interfaces/cartItem'
 
 import './collection-item.styles.scss'
 
 interface CollectionItemProps {
-  item: cartItem
-  addItem: (item: cartItem) => { type: string; payload: cartItem }
+  item: subcategory
+  addItem: (item: any) => { type: string; payload: cartItem }
 }
 
 const CollectionItem = ({
