@@ -1,16 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { createStructuredSelector } from 'reselect'
+import React from "react"
+import { connect } from "react-redux"
+import { createStructuredSelector } from "reselect"
 
 import {
   selectCartItems,
   selectCartTotal
-} from '../../redux/cart/cart.selectors'
-import { cartItem } from '../../interfaces/cartItem'
+} from "../../redux/cart/cart.selectors"
+import { cartItem } from "../../interfaces/cartItem"
+import StripeCheckoutButton from "../../components/stripe/stripe-button.component"
+import CheckoutItem from "../../components/checkout-item/checkout-item"
 
-import CheckoutItem from '../../components/checkout-item/checkout-item'
-
-import './checkout.styles.scss'
+import "./checkout.styles.scss"
 
 interface CheckoutPageProps {
   cartItems: cartItem[]
@@ -18,30 +18,31 @@ interface CheckoutPageProps {
 }
 
 const CheckoutPage = ({ cartItems, total }: CheckoutPageProps): JSX.Element => (
-  <div className="checkout-page">
-    <div className="checkout-header">
-      <div className="header-block">
+  <div className='checkout-page'>
+    <div className='checkout-header'>
+      <div className='header-block'>
         <span>Product</span>
       </div>
-      <div className="header-block">
+      <div className='header-block'>
         <span>Description</span>
       </div>
-      <div className="header-block">
+      <div className='header-block'>
         <span>Quanitity</span>
       </div>
-      <div className="header-block">
+      <div className='header-block'>
         <span>Price</span>
       </div>
-      <div className="header-block">
+      <div className='header-block'>
         <span>Remove</span>
       </div>
     </div>
     {cartItems.map(cartItem => (
       <CheckoutItem key={cartItem.id} cartItem={cartItem} />
     ))}
-    <div className="total">
+    <div className='total'>
       <span>Total: ${total}</span>
     </div>
+    <StripeCheckoutButton price={total} />
   </div>
 )
 
