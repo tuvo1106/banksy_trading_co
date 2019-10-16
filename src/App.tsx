@@ -8,26 +8,36 @@ import HomePage from "./pages/homepage/homepage.component"
 import ShopPage from "./pages/shop/shop.component"
 import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.component"
 import CheckoutPage from "./pages/checkout/checkout.component"
-
 import Header from "./components/header/header.component"
 
-import { auth, createUserProfileDocument } from "./firebase/firebase.utils"
+import { category } from "./interfaces/category"
+
+import {
+  auth,
+  createUserProfileDocument,
+  addCollectionAndDocs
+} from "./firebase/firebase.utils"
 
 import { setCurrentUser } from "./redux/user/user.actions"
 import { selectCurrentUser } from "./redux/user/user.selector"
+import { selectCollectionsForPreview } from "./redux/shop/shop.selectors"
+
+import { user } from "./interfaces/user"
+import { state } from "./interfaces/state"
 
 interface AppProps {
-  setCurrentUser: any
-  currentUser: any
+  setCurrentUser: (user: user) => state
+  currentUser: user | null
+  collectionsArray: category[]
 }
 
 interface AppState {}
 
 class App extends Component<AppProps, AppState> {
-  unsubscribeFromAuth: any = null
+  unsubscribeFromAuth: Function | null = null
 
   componentDidMount() {
-    const { setCurrentUser } = this.props
+    const { setCurrentUser, collectionsArray } = this.props
     // listen for changes on Firebase
     this.unsubscribeFromAuth = auth.onAuthStateChanged(
       async (userAuth: any) => {
@@ -42,13 +52,14 @@ class App extends Component<AppProps, AppState> {
         } else {
           setCurrentUser(userAuth)
         }
+        addCollectionAndDocs("collections", collectionsArray)
       }
     )
   }
 
   // close connection
   componentWillUnmount() {
-    this.unsubscribeFromAuth()
+    if (this.unsubscribeFromAuth !== null) this.unsubscribeFromAuth()
   }
 
   render() {
@@ -73,11 +84,12 @@ class App extends Component<AppProps, AppState> {
 }
 
 const mapStateToProps = createStructuredSelector({
-  currentUser: selectCurrentUser
+  currentUser: selectCurrentUser,
+  collectionsArray: selectCollectionsForPreview
 })
 
-const mapDispatchToProps = (dispatch: any) => ({
-  setCurrentUser: (user: any) => dispatch(setCurrentUser(user))
+const mapDispatchToProps = (dispatch: Function) => ({
+  setCurrentUser: (user: user): state => dispatch(setCurrentUser(user))
 })
 
 export default connect(

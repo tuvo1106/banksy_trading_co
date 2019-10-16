@@ -7,9 +7,7 @@ import { auth, createUserProfileDocument } from "../../firebase/firebase.utils"
 
 import "./sign-up.styles.scss"
 
-interface SignUpProps {}
-
-class SignUp extends Component<SignUpProps, any> {
+class SignUp extends Component<any, any> {
   _isMounted = false
   constructor(props: any) {
     super(props)
