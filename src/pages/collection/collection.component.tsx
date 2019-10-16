@@ -22,7 +22,6 @@ interface CollectionPageProps extends ownProps {
 }
 
 const CollectionPage = ({ collection }: CollectionPageProps): JSX.Element => {
-  console.log(collection)
   const { title, items } = collection
   return (
     <div className='collection-page'>
