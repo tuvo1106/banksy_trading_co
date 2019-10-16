@@ -35,6 +35,7 @@ interface AppState {}
 
 class App extends Component<AppProps, AppState> {
   unsubscribeFromAuth: Function | null = null
+  load_firebase: boolean = false
 
   componentDidMount() {
     const { setCurrentUser, collectionsArray } = this.props
@@ -52,7 +53,12 @@ class App extends Component<AppProps, AppState> {
         } else {
           setCurrentUser(userAuth)
         }
-        addCollectionAndDocs("collections", collectionsArray)
+        if (this.load_firebase) {
+          addCollectionAndDocs(
+            "collections",
+            collectionsArray.map(({ title, items }) => ({ title, items }))
+          )
+        }
       }
     )
   }

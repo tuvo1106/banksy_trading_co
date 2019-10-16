@@ -34,12 +34,37 @@ export const createUserProfileDocument = async (
 
 firebase.initializeApp(config)
 
-export const addCollectionAndDocs = (
+export const addCollectionAndDocs = async (
   collectionKey: string,
-  objectsToAdd: any
-) => {
+  objectsToAdd: any[]
+): Promise<any> => {
   const collectionRef = firestore.collection(collectionKey)
-  console.log(collectionRef)
+
+  // batch write
+  const batch = firestore.batch()
+  objectsToAdd.forEach(obj => {
+    const newDocRef = collectionRef.doc()
+    batch.set(newDocRef, obj)
+  })
+
+  return await batch.commit()
+}
+
+export const convertCollectionsSnapshotToMap = (collections: any) => {
+  const transformedCollection = collections.docs.map((doc: any) => {
+    const { title, items } = doc.data()
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    }
+  })
+
+  return transformedCollection.reduce((acc: any, collection: any): any => {
+    acc[collection.title.toLowerCase()] = collection
+    return acc
+  }, {})
 }
 
 export const auth = firebase.auth()

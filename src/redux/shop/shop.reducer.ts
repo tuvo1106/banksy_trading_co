@@ -1,4 +1,5 @@
 import { category } from "../../interfaces/category"
+import ShopActionTypes from "./shop.types"
 
 interface state {
   collections: {
@@ -258,6 +259,11 @@ const INITITAL_STATE: state = {
 
 const shopReducer = (state = INITITAL_STATE, action: any): state => {
   switch (action.type) {
+    case ShopActionTypes.UPDATE_COLLECTIONS:
+      return {
+        ...state,
+        collections: action.payload
+      }
     default:
       return state
   }
