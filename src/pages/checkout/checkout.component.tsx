@@ -8,7 +8,7 @@ import {
 } from "../../redux/cart/cart.selectors"
 import { cartItem } from "../../interfaces/cartItem"
 import StripeCheckoutButton from "../../components/stripe/stripe-button.component"
-import CheckoutItem from "../../components/checkout-item/checkout-item"
+import CheckoutItem from "../../components/checkout-item/checkout-item.component"
 
 import "./checkout.styles.scss"
 
