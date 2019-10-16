@@ -34,6 +34,14 @@ export const createUserProfileDocument = async (
 
 firebase.initializeApp(config)
 
+export const addCollectionAndDocs = (
+  collectionKey: string,
+  objectsToAdd: any
+) => {
+  const collectionRef = firestore.collection(collectionKey)
+  console.log(collectionRef)
+}
+
 export const auth = firebase.auth()
 export const firestore = firebase.firestore()
 
