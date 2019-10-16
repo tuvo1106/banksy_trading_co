@@ -5,6 +5,7 @@ import { connect } from "react-redux"
 import CollectionsOverview from "../../components/collections-overview/collections-overview.component"
 import CollectionPage from "../collection/collection.component"
 import { updateCollections } from "../../redux/shop/shop.actions"
+import WithSpinner from "../../components/with-spinner/with-spinner.component"
 
 import {
   firestore,
@@ -18,7 +19,13 @@ interface ShopPageProps {
   updateCollections: Function
 }
 
+const CollectionsOverviewWithSpinner = WithSpinner(CollectionsOverview)
+const CollectionPageWithSpinner = WithSpinner(CollectionPage)
+
 class ShopPage extends Component<ShopPageProps, {}> {
+  state = {
+    loading: true
+  }
   unsubscribeFromSnapshot: any = null
 
   componentDidMount() {
@@ -28,21 +35,27 @@ class ShopPage extends Component<ShopPageProps, {}> {
       async (snapshot: any) => {
         const collectionsMap = convertCollectionsSnapshotToMap(snapshot)
         updateCollections(collectionsMap)
+        this.setState({ loading: false })
       }
     )
   }
 
   render() {
     const { match } = this.props
+    const { loading } = this.state
     return (
       <div className='shop-page'>
         <Route
           exact
           path={`${match.path}`}
-          component={CollectionsOverview}></Route>
+          render={props => (
+            <CollectionsOverviewWithSpinner isLoading={loading} {...props} />
+          )}></Route>
         <Route
           path={`${match.path}/:collectionId`}
-          component={CollectionPage}></Route>
+          render={props => (
+            <CollectionPageWithSpinner isLoading={loading} {...props} />
+          )}></Route>
       </div>
     )
   }
