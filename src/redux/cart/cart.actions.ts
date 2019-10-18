@@ -1,5 +1,5 @@
-import { CartActionTypes } from './cart.types'
-import { cartItem } from '../../interfaces/cartItem'
+import { CartActionTypes } from "./cart.types"
+import { cartItem } from "../../interfaces/cartItem"
 
 export interface cartAction {
   (item?: cartItem): {
@@ -25,4 +25,8 @@ export const clearItemFromCart: cartAction = item => ({
 export const removeItem: cartAction = item => ({
   type: CartActionTypes.REMOVE_ITEM,
   payload: item
+})
+
+export const clearCart = () => ({
+  type: CartActionTypes.CLEAR_CART
 })
