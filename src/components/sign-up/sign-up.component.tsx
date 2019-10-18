@@ -1,14 +1,14 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
+import { connect } from "react-redux"
 
 import FormInput from "../form-input/form-input.component"
 import CustomButton from "../custom-button/custom-button.component"
 
-import { auth, createUserProfileDocument } from "../../firebase/firebase.utils"
+import { signUpStart } from "../../redux/user/user.actions"
 
 import "./sign-up.styles.scss"
 
-const SignUp = () => {
-  const [isMounted, setIsMounted] = useState(false)
+const SignUp = ({ signUpStart }: any) => {
   const [userCreds, setCred] = useState({
     displayName: "",
     email: "",
@@ -19,38 +19,17 @@ const SignUp = () => {
 
   const handleSubmit = async (event: any): Promise<any> => {
     event.preventDefault()
-    setIsMounted(true)
     if (password !== confirmPassword) {
       alert("passwords don't match")
       return
     }
-    try {
-      const { user } = await auth.createUserWithEmailAndPassword(
-        email,
-        password
-      )
-      await createUserProfileDocument(user, { displayName })
-      if (isMounted) {
-        setCred({
-          displayName: "",
-          email: "",
-          password: "",
-          confirmPassword: ""
-        })
-      }
-    } catch (error) {
-      console.error(error)
-    }
+    signUpStart({ displayName, email, password })
   }
 
   const handleChange = (event: any): void => {
     const { name, value } = event.target
     setCred({ ...userCreds, [name]: value })
   }
-
-  useEffect(() => {
-    return () => setIsMounted(false)
-  }, [])
 
   return (
     <div className='sign-up'>
@@ -95,4 +74,11 @@ const SignUp = () => {
   )
 }
 
-export default SignUp
+const mapDispatchToProps = (dispatch: Function) => ({
+  signUpStart: (userCreds: any) => dispatch(signUpStart(userCreds))
+})
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(SignUp)
