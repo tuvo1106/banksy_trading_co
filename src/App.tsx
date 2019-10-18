@@ -10,10 +10,9 @@ import SignInAndSignUp from "./pages/sign-in-and-sign-up/sign-in-and-sign-up.com
 import CheckoutPage from "./pages/checkout/checkout.component"
 import Header from "./components/header/header.component"
 
-import { category } from "./interfaces/category"
-
 import { selectCurrentUser } from "./redux/user/user.selector"
 import { selectCollectionsForPreview } from "./redux/shop/shop.selectors"
+import { checkUserSession } from "./redux/user/user.actions"
 
 import { user } from "./interfaces/user"
 import { state } from "./interfaces/state"
@@ -21,37 +20,18 @@ import { state } from "./interfaces/state"
 interface AppProps {
   setCurrentUser: (user: user) => state
   currentUser: user | null
-  collectionsArray: category[]
+  // collectionsArray: category[],
+  checkUserSession: any
 }
 
 interface AppState {}
 
 class App extends Component<AppProps, AppState> {
   unsubscribeFromAuth: Function | null = null
-  load_firebase: boolean = false
 
   componentDidMount() {
-    // this.unsubscribeFromAuth = auth.onAuthStateChanged(
-    //   async (userAuth: any) => {
-    //     if (userAuth) {
-    //       const userRef: any = await createUserProfileDocument(userAuth, null)
-    //       userRef.onSnapshot((snapshot: any) => {
-    //         setCurrentUser({
-    //           id: snapshot.id,
-    //           ...snapshot.data()
-    //         })
-    //       })
-    //     } else {
-    //       setCurrentUser(userAuth)
-    //     }
-    //     if (this.load_firebase) {
-    //       addCollectionAndDocs(
-    //         "collections",
-    //         collectionsArray.map(({ title, items }) => ({ title, items }))
-    //       )
-    //     }
-    //   }
-    // )
+    const { checkUserSession } = this.props
+    checkUserSession()
   }
 
   // close connection
@@ -85,4 +65,11 @@ const mapStateToProps = createStructuredSelector({
   collectionsArray: selectCollectionsForPreview
 })
 
-export default connect(mapStateToProps)(App)
+const mapDispatchToProps = (dispatch: Function) => ({
+  checkUserSession: () => dispatch(checkUserSession())
+})
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(App)
