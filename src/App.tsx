@@ -12,13 +12,6 @@ import Header from "./components/header/header.component"
 
 import { category } from "./interfaces/category"
 
-import {
-  auth,
-  createUserProfileDocument,
-  addCollectionAndDocs
-} from "./firebase/firebase.utils"
-
-import { setCurrentUser } from "./redux/user/user.actions"
 import { selectCurrentUser } from "./redux/user/user.selector"
 import { selectCollectionsForPreview } from "./redux/shop/shop.selectors"
 
@@ -38,29 +31,27 @@ class App extends Component<AppProps, AppState> {
   load_firebase: boolean = false
 
   componentDidMount() {
-    const { setCurrentUser, collectionsArray } = this.props
-    // listen for changes on Firebase
-    this.unsubscribeFromAuth = auth.onAuthStateChanged(
-      async (userAuth: any) => {
-        if (userAuth) {
-          const userRef: any = await createUserProfileDocument(userAuth, null)
-          userRef.onSnapshot((snapshot: any) => {
-            setCurrentUser({
-              id: snapshot.id,
-              ...snapshot.data()
-            })
-          })
-        } else {
-          setCurrentUser(userAuth)
-        }
-        if (this.load_firebase) {
-          addCollectionAndDocs(
-            "collections",
-            collectionsArray.map(({ title, items }) => ({ title, items }))
-          )
-        }
-      }
-    )
+    // this.unsubscribeFromAuth = auth.onAuthStateChanged(
+    //   async (userAuth: any) => {
+    //     if (userAuth) {
+    //       const userRef: any = await createUserProfileDocument(userAuth, null)
+    //       userRef.onSnapshot((snapshot: any) => {
+    //         setCurrentUser({
+    //           id: snapshot.id,
+    //           ...snapshot.data()
+    //         })
+    //       })
+    //     } else {
+    //       setCurrentUser(userAuth)
+    //     }
+    //     if (this.load_firebase) {
+    //       addCollectionAndDocs(
+    //         "collections",
+    //         collectionsArray.map(({ title, items }) => ({ title, items }))
+    //       )
+    //     }
+    //   }
+    // )
   }
 
   // close connection
@@ -94,11 +85,4 @@ const mapStateToProps = createStructuredSelector({
   collectionsArray: selectCollectionsForPreview
 })
 
-const mapDispatchToProps = (dispatch: Function) => ({
-  setCurrentUser: (user: user): state => dispatch(setCurrentUser(user))
-})
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App)
+export default connect(mapStateToProps)(App)
