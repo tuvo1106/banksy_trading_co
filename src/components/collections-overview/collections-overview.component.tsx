@@ -3,7 +3,7 @@ import React from "react"
 import { connect } from "react-redux"
 import { createStructuredSelector } from "reselect"
 
-/* modules */
+/* components */
 import CollectionPreview from "../../components/collection-preview/collection-preview.component"
 
 /* selectors */
