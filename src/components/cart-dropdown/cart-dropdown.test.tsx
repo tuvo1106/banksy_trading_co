@@ -1,6 +1,7 @@
 /* modules */
 import React from "react"
-import { shallow, ShallowWrapper } from "enzyme"
+import { configure, shallow, ShallowWrapper } from "enzyme"
+import Adapter from "enzyme-adapter-react-16"
 
 /* components */
 import { CartDropdown } from "./cart-dropdown.component"
@@ -8,6 +9,8 @@ import CartItem from "../cart-item/cart-item.component"
 
 /* actions */
 import { toggleCartHidden } from "../../redux/cart/cart.actions"
+
+configure({ adapter: new Adapter() })
 
 describe("CartDropdown component", () => {
   let wrapper: ShallowWrapper
