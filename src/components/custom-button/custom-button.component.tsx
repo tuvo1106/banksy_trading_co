@@ -1,5 +1,7 @@
+/* modules */
 import React from "react"
 
+/* styles */
 import "./custom-button.styles.scss"
 
 interface CustomButtonProps {
@@ -10,7 +12,7 @@ interface CustomButtonProps {
   onClick?: (event: any) => void
 }
 
-const CustomButton = ({
+export const CustomButton = ({
   children,
   isGoogleSignIn,
   inverted,
