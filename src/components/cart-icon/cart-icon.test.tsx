@@ -10,11 +10,10 @@ configure({ adapter: new Adapter() })
 
 describe("CartIcon component", () => {
   let wrapper: ShallowWrapper
-  let mockToggleCartHidden: Function
+  let mockToggleCartHidden: (event: any) => void
 
   beforeEach(() => {
     mockToggleCartHidden = jest.fn()
-
     const mockProps = {
       itemCount: 0,
       toggleCartHidden: mockToggleCartHidden
