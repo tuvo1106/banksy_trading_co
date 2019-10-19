@@ -17,7 +17,7 @@ export const CustomButton = ({
   isGoogleSignIn,
   inverted,
   ...otherProps
-}: CustomButtonProps) => (
+}: CustomButtonProps): JSX.Element => (
   <button
     className={`${inverted ? "inverted" : ""} ${
       isGoogleSignIn ? "google-sign-in" : ""
