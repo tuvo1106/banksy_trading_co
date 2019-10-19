@@ -1,18 +1,25 @@
+/* modules */
 import React from "react"
 import { connect } from "react-redux"
 import { createStructuredSelector } from "reselect"
 
-import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors"
+/* modules */
 import CollectionPreview from "../../components/collection-preview/collection-preview.component"
+
+/* selectors */
+import { selectCollectionsForPreview } from "../../redux/shop/shop.selectors"
+
+/* interfaces */
 import { category } from "../../interfaces/category"
 
+/* styles */
 import "./collections-overview.styles.scss"
 
 interface CollectionsOverviewProps {
   collections: category[]
 }
 
-const CollectionsOverview = ({
+export const CollectionsOverview = ({
   collections
 }: CollectionsOverviewProps): JSX.Element => (
   <div className='collections-overview'>
