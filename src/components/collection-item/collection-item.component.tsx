@@ -1,19 +1,25 @@
+/* modules */
 import React from "react"
 import { connect } from "react-redux"
 
+/* components */
 import CustomButton from "../custom-button/custom-button.component"
-import { addItem } from "../../redux/cart/cart.actions"
-import { subcategory } from "../../interfaces/category"
-import { cartItem } from "../../interfaces/cart"
 
+/* actions */
+import { addItem } from "../../redux/cart/cart.actions"
+
+/* interfaces */
+import { cartItem, cartAction } from "../../interfaces/cart"
+
+/* styles */
 import "./collection-item.styles.scss"
 
 interface CollectionItemProps {
-  item: subcategory
-  addItem: (item: any) => { type: string; payload: cartItem }
+  item: any
+  addItem: cartAction
 }
 
-const CollectionItem = ({
+export const CollectionItem = ({
   item,
   addItem
 }: CollectionItemProps): JSX.Element => {
