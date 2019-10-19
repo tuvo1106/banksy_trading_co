@@ -38,17 +38,17 @@ describe("CollectionItem component", () => {
     expect(wrapper).toMatchSnapshot()
   })
 
-  it("should call addItem when AddButton clicked", () => {
+  it("should call addItem when button is clicked", () => {
     wrapper.find("CustomButton").simulate("click")
 
     expect(mockAddItem).toHaveBeenCalled()
   })
 
-  it("should render name prop in NameContainer", () => {
+  it("should render name prop in name class", () => {
     expect(wrapper.find(".name").text()).toBe(mockName)
   })
 
-  it("should render price prop in PriceContainer", () => {
+  it("should render price prop in price class", () => {
     const price = parseInt(wrapper.find(".price").text())
     expect(price).toBe(mockPrice)
   })

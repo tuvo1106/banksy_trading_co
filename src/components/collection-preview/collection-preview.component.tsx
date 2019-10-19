@@ -1,20 +1,38 @@
-import React from 'react'
-import CollectionItem from '../collection-item/collection-item.component'
-import { subcategory } from '../../interfaces/category'
+/* modules */
+import React from "react"
+import { withRouter, RouteComponentProps } from "react-router-dom"
 
-import './collection-preview.styles.scss'
+/* components */
+import CollectionItem from "../collection-item/collection-item.component"
 
-interface CollectionPreviewProps {
+/* interfaces */
+import { subcategory } from "../../interfaces/category"
+
+/* styles */
+import "./collection-preview.styles.scss"
+
+interface CollectionPreviewProps extends RouteComponentProps {
   title: string
+  routeName: string
   items: subcategory[]
 }
 
-const CollectionPreview = ({ title, items }: CollectionPreviewProps) => (
-  <div className="collection-preview">
-    <h1 className="title">{title.toUpperCase()}</h1>
-    <div className="preview">
+export const CollectionPreview = ({
+  title,
+  routeName,
+  items,
+  history,
+  match
+}: CollectionPreviewProps) => (
+  <div className='collection-preview'>
+    <h1
+      className='title'
+      onClick={() => history.push(`${match.path}/${routeName}`)}>
+      {title.toUpperCase()}
+    </h1>
+    <div className='preview'>
       {items
-        .filter((item: subcategory, index: number) => index < 4)
+        .filter((item: subcategory, index: number) => item && index < 4)
         .map((item: subcategory) => (
           <CollectionItem key={item.id} item={item}></CollectionItem>
         ))}
@@ -22,4 +40,4 @@ const CollectionPreview = ({ title, items }: CollectionPreviewProps) => (
   </div>
 )
 
-export default CollectionPreview
+export default withRouter(CollectionPreview)
