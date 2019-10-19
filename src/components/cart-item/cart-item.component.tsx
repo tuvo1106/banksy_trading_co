@@ -2,7 +2,7 @@
 import React from "react"
 
 /* interfaces */
-import { cartItem } from "../../interfaces/cartItem"
+import { cartItem } from "../../interfaces/cart"
 
 /* styles */
 import "./cart-item.styles.scss"

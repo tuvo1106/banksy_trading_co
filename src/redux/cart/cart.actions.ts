@@ -1,5 +1,5 @@
 import { CartActionTypes } from "./cart.types"
-import { cartItem } from "../../interfaces/cartItem"
+import { cartItem } from "../../interfaces/cart"
 
 export interface cartAction {
   (item?: cartItem): {

@@ -1,4 +1,4 @@
-import { cartItem } from '../../interfaces/cartItem'
+import { cartItem } from "../../interfaces/cart"
 
 export const addItemToCart = (
   cartItems: cartItem[],

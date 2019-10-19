@@ -15,7 +15,7 @@ import { selectCartItems } from "../../redux/cart/cart.selectors"
 import { toggleCartHidden } from "../../redux/cart/cart.actions"
 
 /* interfaces */
-import { cartItem } from "../../interfaces/cartItem"
+import { cartItem } from "../../interfaces/cart"
 
 /* styling */
 import "./cart-dropdown.scss"

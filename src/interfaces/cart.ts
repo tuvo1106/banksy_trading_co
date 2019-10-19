@@ -5,3 +5,7 @@ export interface cartItem {
   price: number
   quantity: number
 }
+
+export interface cartAction {
+  (item: cartItem): { type: string; payload: cartItem }
+}
