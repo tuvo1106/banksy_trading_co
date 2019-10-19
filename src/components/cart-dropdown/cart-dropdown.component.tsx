@@ -1,24 +1,34 @@
+/* modules */
 import React from "react"
 import { connect } from "react-redux"
 import { createStructuredSelector } from "reselect"
 import { withRouter } from "react-router-dom"
 
-import CustomButton from "../custom-button/custom-button.component"
+/* components */
 import CartItem from "../cart-item/cart-item.component"
+import CustomButton from "../custom-button/custom-button.component"
+
+/* selectors */
 import { selectCartItems } from "../../redux/cart/cart.selectors"
+
+/* actions */
 import { toggleCartHidden } from "../../redux/cart/cart.actions"
 
+/* interfaces */
 import { cartItem } from "../../interfaces/cartItem"
 
+/* styling */
 import "./cart-dropdown.scss"
 
 interface CartDropdownProps {
   cartItems: cartItem[]
-  history: any
+  history: {
+    push: Function
+  }
   dispatch: Function
 }
 
-const CartDropdown = ({
+export const CartDropdown = ({
   cartItems,
   history,
   dispatch
