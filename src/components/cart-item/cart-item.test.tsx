@@ -11,7 +11,7 @@ configure({ adapter: new Adapter() })
 it("should render CartItem component", () => {
   const mockItem = {
     id: 1,
-    imageUrl: "test",
+    imageUrl: "www.test.com",
     price: 1,
     name: "test",
     quantity: 1

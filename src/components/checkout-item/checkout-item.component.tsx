@@ -1,24 +1,28 @@
+/* modules */
 import React from "react"
 import { connect } from "react-redux"
 
+/* actions */
 import {
   clearItemFromCart,
   addItem,
   removeItem
 } from "../../redux/cart/cart.actions"
 
-import "../../interfaces/cartItem"
+/* interfaces */
+import { cartItem, cartAction } from "../../interfaces/cart"
+
+/* styles */
 import "./checkout-item.styles.scss"
-import { cartItem } from "../../interfaces/cartItem"
 
 interface CheckoutItemProps {
   cartItem: cartItem
-  clearItem: (item: cartItem) => { type: string; payload: cartItem }
-  addItem: (item: cartItem) => { type: string; payload: cartItem }
-  removeItem: (item: cartItem) => { type: string; payload: cartItem }
+  clearItem: cartAction
+  addItem: cartAction
+  removeItem: cartAction
 }
 
-const CheckoutItem = ({
+export const CheckoutItem = ({
   cartItem,
   clearItem,
   addItem,
@@ -32,11 +36,11 @@ const CheckoutItem = ({
       </div>
       <span className='name'>{name}</span>
       <span className='quantity'>
-        <div className='arrow' onClick={() => removeItem(cartItem)}>
+        <div className='remove-item arrow' onClick={() => removeItem(cartItem)}>
           &#10094;
         </div>
         <span className='value'>{quantity}</span>
-        <div className='arrow' onClick={() => addItem(cartItem)}>
+        <div className='add-item arrow' onClick={() => addItem(cartItem)}>
           &#10095;
         </div>
       </span>
@@ -48,7 +52,7 @@ const CheckoutItem = ({
   )
 }
 
-const mapDispatchToProps = (dispatch: any) => ({
+const mapDispatchToProps = (dispatch: Function) => ({
   clearItem: (item: cartItem) => dispatch(clearItemFromCart(item)),
   addItem: (item: cartItem) => dispatch(addItem(item)),
   removeItem: (item: cartItem) => dispatch(removeItem(item))
