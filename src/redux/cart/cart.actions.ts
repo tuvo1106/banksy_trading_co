@@ -1,12 +1,5 @@
 import { CartActionTypes } from "./cart.types"
-import { cartItem } from "../../interfaces/cart"
-
-export interface cartAction {
-  (item?: cartItem): {
-    type: string
-    payload?: cartItem
-  }
-}
+import { cartAction } from "../../interfaces/cart"
 
 export const toggleCartHidden: cartAction = () => ({
   type: CartActionTypes.TOGGLE_CART_HIDDEN
