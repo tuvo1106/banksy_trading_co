@@ -1,9 +1,16 @@
-import React from "react"
+/* modules */
+import React, { Component } from "react"
 
+/* styles */
 import { SpinnerContainer, SpinnerOverlay } from "./with-spinner.styles"
 
-const WithSpinner = (WrappedComponent: any): any => {
-  const Spinner = ({ isLoading, ...otherProps }: any): JSX.Element => {
+interface SpinnerProps {
+  isLoading: Boolean
+  [key: string]: any
+}
+
+const WithSpinner = (WrappedComponent: typeof Component): Function => {
+  const Spinner = ({ isLoading, ...otherProps }: SpinnerProps): JSX.Element => {
     return isLoading ? (
       <SpinnerOverlay>
         <SpinnerContainer />

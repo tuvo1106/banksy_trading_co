@@ -1,3 +1,4 @@
+/* modules */
 import React from "react"
 import StripeCheckout from "react-stripe-checkout"
 
@@ -27,6 +28,7 @@ const StripeCheckoutButton = ({
   const onToken = (token: token): void => {
     console.log(token)
   }
+
   return (
     <StripeCheckout
       label='Pay Now'
