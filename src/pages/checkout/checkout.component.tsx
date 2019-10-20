@@ -1,15 +1,22 @@
+/* modules */
 import React from "react"
 import { connect } from "react-redux"
 import { createStructuredSelector } from "reselect"
 
+/* components */
+import StripeCheckoutButton from "../../components/stripe/stripe-button.component"
+import CheckoutItem from "../../components/checkout-item/checkout-item.component"
+
+/* selectors */
 import {
   selectCartItems,
   selectCartTotal
 } from "../../redux/cart/cart.selectors"
-import { cartItem } from "../../interfaces/cart"
-import StripeCheckoutButton from "../../components/stripe/stripe-button.component"
-import CheckoutItem from "../../components/checkout-item/checkout-item.component"
 
+/* interfaces */
+import { cartItem } from "../../interfaces/cart"
+
+/* styles */
 import "./checkout.styles.scss"
 
 interface CheckoutPageProps {
@@ -17,7 +24,10 @@ interface CheckoutPageProps {
   total: number
 }
 
-const CheckoutPage = ({ cartItems, total }: CheckoutPageProps): JSX.Element => (
+export const CheckoutPage = ({
+  cartItems,
+  total
+}: CheckoutPageProps): JSX.Element => (
   <div className='checkout-page'>
     <div className='checkout-header'>
       <div className='header-block'>
