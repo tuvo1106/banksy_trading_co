@@ -1,9 +1,18 @@
+/* modules */
 import React from "react"
 import { connect } from "react-redux"
-import { selectCollection } from "../../redux/shop/shop.selectors"
+
+/* components */
 import CollectionItem from "../../components/collection-item/collection-item.component"
 
+/* selectors */
+import { selectCollection } from "../../redux/shop/shop.selectors"
+
+/* interfaces */
 import { subcategory } from "../../interfaces/category"
+import { state } from "../../interfaces/state"
+
+/* styles */
 import "./collection.styles.scss"
 
 interface ownProps {
@@ -21,7 +30,9 @@ interface CollectionPageProps extends ownProps {
   }
 }
 
-const CollectionPage = ({ collection }: CollectionPageProps): JSX.Element => {
+export const CollectionPage = ({
+  collection
+}: CollectionPageProps): JSX.Element => {
   const { title, items } = collection
   return (
     <div className='collection-page'>
@@ -35,7 +46,7 @@ const CollectionPage = ({ collection }: CollectionPageProps): JSX.Element => {
   )
 }
 
-const mapStateToProps = (state: any, ownProps: ownProps) => ({
+const mapStateToProps = (state: state, ownProps: ownProps) => ({
   collection: selectCollection(ownProps.match.params.collectionId)(state)
 })
 
