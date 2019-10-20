@@ -1,9 +1,13 @@
+/* modules */
 import React, { useEffect } from "react"
 import { Route } from "react-router-dom"
 import { connect } from "react-redux"
 
+/* components */
 import CollectionsOverviewContainer from "../../components/collections-overview/collections-overview.container"
 import CollectionPageContainer from "../collection/collection.container"
+
+/* actions */
 import { fetchCollectionsStart } from "../../redux/shop/shop.actions"
 
 interface ShopPageProps {
@@ -13,7 +17,10 @@ interface ShopPageProps {
   fetchCollectionsStart: Function
 }
 
-const ShopPage = ({ match, fetchCollectionsStart }: ShopPageProps) => {
+export const ShopPage = ({
+  match,
+  fetchCollectionsStart
+}: ShopPageProps): JSX.Element => {
   useEffect(() => {
     fetchCollectionsStart()
   }, [fetchCollectionsStart])
