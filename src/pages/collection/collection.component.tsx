@@ -10,7 +10,6 @@ import { selectCollection } from "../../redux/shop/shop.selectors"
 
 /* interfaces */
 import { subcategory } from "../../interfaces/category"
-import { state } from "../../interfaces/state"
 
 /* styles */
 import "./collection.styles.scss"
@@ -46,7 +45,7 @@ export const CollectionPage = ({
   )
 }
 
-const mapStateToProps = (state: state, ownProps: ownProps) => ({
+const mapStateToProps = (state: any, ownProps: ownProps) => ({
   collection: selectCollection(ownProps.match.params.collectionId)(state)
 })
 
