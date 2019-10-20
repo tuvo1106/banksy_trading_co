@@ -1,28 +1,36 @@
+/* modules */
 import React, { useState } from "react"
 import { connect } from "react-redux"
 
+/* components */
 import FormInput from "../form-input/form-input.component"
 import CustomButton from "../custom-button/custom-button.component"
 
+/* actions */
 import {
   googleSignInStart,
   emailSignInStart
 } from "../../redux/user/user.actions"
+
+/* styles */
 import "./sign-in.styles.scss"
 
 interface SignInProps {
-  googleSignInStart: any
-  emailSignInStart: any
+  googleSignInStart: (event: any) => void
+  emailSignInStart: Function
 }
 
-const SignIn = ({ googleSignInStart, emailSignInStart }: SignInProps) => {
+export const SignIn = ({
+  googleSignInStart,
+  emailSignInStart
+}: SignInProps) => {
   const [userCreds, setCreds] = useState({
     email: "",
     password: ""
   })
   const { email, password } = userCreds
 
-  const handleSubmit = async (event: any) => {
+  const handleSubmit = async (event: any): Promise<any> => {
     event.preventDefault()
     emailSignInStart(email, password)
   }
@@ -67,7 +75,7 @@ const SignIn = ({ googleSignInStart, emailSignInStart }: SignInProps) => {
 
 const mapDispatchToProps = (dispatch: Function) => ({
   googleSignInStart: () => dispatch(googleSignInStart()),
-  emailSignInStart: (email: any, password: any) =>
+  emailSignInStart: (email: string, password: string) =>
     dispatch(emailSignInStart({ email, password }))
 })
 
