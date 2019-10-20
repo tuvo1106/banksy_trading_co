@@ -1,7 +1,7 @@
-import { directoryItem } from "../../interfaces/directoryItem"
+import { menuItem } from "../../interfaces/menuItem"
 
 interface state {
-  sections: directoryItem[]
+  sections: menuItem[]
 }
 
 const INITITAL_STATE: state = {

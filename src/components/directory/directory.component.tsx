@@ -10,13 +10,13 @@ import MenuItem from "../menu-item/menu-item.component"
 import { selectDirectorySections } from "../../redux/directory/directory.selector"
 
 /* interfaces */
-import { directoryItem } from "../../interfaces/directoryItem"
+import { menuItem } from "../../interfaces/menuItem"
 
 /* styles */
 import "./directory.styles.scss"
 
 interface DirectoryProps {
-  sections: directoryItem[]
+  sections: menuItem[]
 }
 
 export const Directory = ({ sections }: DirectoryProps): JSX.Element => (

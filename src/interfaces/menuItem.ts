@@ -1,4 +1,4 @@
-export interface directoryItem {
+export interface menuItem {
   title: string
   imageUrl: string
   id: number
