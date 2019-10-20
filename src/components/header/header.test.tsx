@@ -38,7 +38,7 @@ describe("Header component", () => {
       expect(
         wrapper
           .find(".option")
-          .at(2)
+          .at(1)
           .text()
       ).toBe("Sign Out")
     })
@@ -46,7 +46,7 @@ describe("Header component", () => {
     it("should call signOutStart method when link is clicked", () => {
       wrapper
         .find(".option")
-        .at(2)
+        .at(1)
         .simulate("click")
 
       expect(mockSignOutStart).toHaveBeenCalled()
@@ -66,7 +66,7 @@ describe("Header component", () => {
       expect(
         newWrapper
           .find(".option")
-          .at(2)
+          .at(1)
           .text()
       ).toBe("Sign In")
     })

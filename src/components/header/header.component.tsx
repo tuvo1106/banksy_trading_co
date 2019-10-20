@@ -41,9 +41,6 @@ export const Header = ({
       <Link className='option' to='/shop'>
         Shop
       </Link>
-      <Link className='option' to='/contact'>
-        Contact
-      </Link>
       {currentUser ? (
         <div className='option' onClick={signOutStart}>
           Sign Out
