@@ -8,7 +8,7 @@ import { SignIn } from "./sign-in.component"
 
 configure({ adapter: new Adapter() })
 
-describe("FormInput component", () => {
+describe("SignIn component", () => {
   let wrapper: ShallowWrapper
   let mockGoogleSignInStart: (event: any) => void
   let mockEmailSignInStart: Function
@@ -25,7 +25,7 @@ describe("FormInput component", () => {
     wrapper = shallow(<SignIn {...mockProps} />)
   })
 
-  it("should render CustomButton component", () => {
+  it("should render Signin component", () => {
     expect(wrapper).toMatchSnapshot()
   })
 })

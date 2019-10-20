@@ -1,3 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FormInput component should render CustomButton component 1`] = `ShallowWrapper {}`;
+exports[`SignIn component should render Signin component 1`] = `ShallowWrapper {}`;

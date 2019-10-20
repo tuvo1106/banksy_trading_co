@@ -1,14 +1,23 @@
+/* modules */
 import React, { useState } from "react"
 import { connect } from "react-redux"
 
+/* components */
 import FormInput from "../form-input/form-input.component"
 import CustomButton from "../custom-button/custom-button.component"
 
+/* actions */
 import { signUpStart } from "../../redux/user/user.actions"
 
+/* styles */
 import "./sign-up.styles.scss"
+import { user } from "../../interfaces/user"
 
-const SignUp = ({ signUpStart }: any) => {
+interface SignUpProps {
+  signUpStart: Function
+}
+
+export const SignUp = ({ signUpStart }: SignUpProps): JSX.Element => {
   const [userCreds, setCred] = useState({
     displayName: "",
     email: "",
@@ -75,7 +84,7 @@ const SignUp = ({ signUpStart }: any) => {
 }
 
 const mapDispatchToProps = (dispatch: Function) => ({
-  signUpStart: (userCreds: any) => dispatch(signUpStart(userCreds))
+  signUpStart: (userCreds: user) => dispatch(signUpStart(userCreds))
 })
 
 export default connect(

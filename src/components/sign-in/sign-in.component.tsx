@@ -23,7 +23,7 @@ interface SignInProps {
 export const SignIn = ({
   googleSignInStart,
   emailSignInStart
-}: SignInProps) => {
+}: SignInProps): JSX.Element => {
   const [userCreds, setCreds] = useState({
     email: "",
     password: ""
