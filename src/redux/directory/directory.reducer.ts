@@ -4,7 +4,7 @@ interface state {
   sections: menuItem[]
 }
 
-const INITITAL_STATE: state = {
+export const INITIAL_STATE: state = {
   sections: [
     {
       title: "watches",
@@ -45,7 +45,7 @@ const INITITAL_STATE: state = {
   ]
 }
 
-const directoryReducer = (state = INITITAL_STATE, action: any): state => {
+const directoryReducer = (state = INITIAL_STATE, action: any): state => {
   switch (action.type) {
     default:
       return state
