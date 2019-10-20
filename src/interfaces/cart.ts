@@ -7,5 +7,5 @@ export interface cartItem {
 }
 
 export interface cartAction {
-  (item: cartItem): { type: string; payload?: cartItem }
+  (item?: cartItem): { type: string; payload?: cartItem }
 }

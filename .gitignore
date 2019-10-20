@@ -42,3 +42,4 @@ public/
 
 # firebase env
 src/firebase/firebase.env.ts
+REDUX.md
