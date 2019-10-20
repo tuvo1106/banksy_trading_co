@@ -1,23 +1,23 @@
+/* modules */
 import React from "react"
-import { withRouter } from "react-router-dom"
+import { withRouter, RouteComponentProps } from "react-router-dom"
 
+/* styles */
 import "./menu-item.styles.scss"
 
-interface MenuItemProps {
-  history: any
-  title?: string
-  imageUrl?: string
+interface MenuItemProps extends RouteComponentProps {
+  title: string
+  imageUrl: string
+  linkUrl: string
   size?: string
-  linkUrl?: string
-  match?: any
 }
 
-const MenuItem = ({
+export const MenuItem = ({
   title,
   imageUrl,
+  linkUrl,
   size,
   history,
-  linkUrl,
   match
 }: MenuItemProps): JSX.Element => (
   <div
