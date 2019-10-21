@@ -38,8 +38,9 @@ jspm_packages
 .DS_Store
 
 #Excluding build directory
-public/
+# public/
 
 # firebase env
 src/firebase/firebase.env.ts
 REDUX.md
+.env
