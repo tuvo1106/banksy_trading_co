@@ -33,22 +33,23 @@ export const SignUp = ({ signUpStart }: SignUpProps): JSX.Element => {
       alert("passwords don't match")
       return
     }
-
+  
     axios({
-      url: 'payment',
+      url: '/users/register',
       method: 'post',
       data: {
         name: displayName,
         email: email,
-        password: password
+        password: password,
+        password2: password,
       }
     })
       .then((response: any) => {
-        alert('Login successful')
+        alert('Singup successful')
       })
       .catch((error: Error) => {
         console.log(error)
-        alert('Login fail')
+        alert('Signup fail')
       })
 
     // signUpStart({ displayName, email, password })

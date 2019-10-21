@@ -1,6 +1,7 @@
 /* modules */
 import React, { useState } from "react"
 import { connect } from "react-redux"
+import axios from "axios"
 
 /* components */
 import FormInput from "../form-input/form-input.component"
@@ -32,7 +33,25 @@ export const SignIn = ({
 
   const handleSubmit = async (event: any): Promise<any> => {
     event.preventDefault()
-    emailSignInStart(email, password)
+
+    axios({
+      url: '/users/register',
+      method: 'post',
+      data: {
+        email: email,
+        password: password,
+      }
+    })
+      .then((response: any) => {
+        alert('Login successful')
+      })
+      .catch((error: Error) => {
+        console.log(error)
+        alert('Login fail')
+      })
+
+    // eemailSignInStart(email, password)
+    
   }
 
   const handleChange = (event: any): void => {
