@@ -2,6 +2,7 @@
   "name": "banksy",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5000",
   "dependencies": {
     "@types/enzyme": "^3.10.3",
     "@types/enzyme-adapter-react-16": "^1.0.5",
@@ -9,6 +10,7 @@
     "@types/react": "^16.9.5",
     "@types/react-dom": "^16.9.1",
     "@types/redux-logger": "^3.0.7",
+    "axios": "^0.19.0",
     "firebase": "^7.1.0",
     "node-sass": "^4.12.0",
     "parcel-bundler": "^1.12.4",
