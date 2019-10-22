@@ -11,26 +11,36 @@
     "build": "npm install && cd client && npm run build",
     "dev": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client\"",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm install --only=dev --no-shrinkwrap && npm run build",
+    "launch": "npm run build && npm run start"
   },
   "dependencies": {
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "compression": "1.7.4",
+    "connect-flash": "^0.1.1",
     "cors": "2.8.5",
     "dotenv": "7.0.0",
-    "express": "^4.16.4",
-    "stripe": "6.28.0",
-    "bcryptjs": "^2.4.3",
-    "connect-flash": "^0.1.1",
     "ejs": "^2.6.1",
+    "express": "^4.16.4",
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.15.6",
     "mongoose": "^5.4.1",
     "passport": "^0.4.0",
-    "passport-local": "^1.0.0"
+    "passport-local": "^1.0.0",
+    "stripe": "6.28.0",
+    "typescript": "^3.6.4"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.5.0",
+    "@typescript-eslint/parser": "^2.5.0",
     "concurrently": "^4.0.1",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.16.0",
+    "eslint-plugin-react-hooks": "^1.7.0",
     "nodemon": "^1.19.4"
   }
 }
