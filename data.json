@@ -1,0 +1,220 @@
+{
+  "collections": {
+    "casual": {
+      "title": "Casual",
+      "items": []
+    },
+    "professional": {
+      "title": "professional",
+      "items": [
+        {
+          "id": 1,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/2cf8738c0b1cdfef81e2d8db4ebb3f14/5E3EEDE9/t51.2885-15/sh0.08/e35/c0.110.928.928a/s640x640/37931307_437455623406563_7751280603265236992_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=103",
+          "name": "blank",
+          "price": 1
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/215454bea6e97474d4e61554938522d0/5E44E9E9/t51.2885-15/e35/26187926_195241104365492_5113123458825322496_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
+          "name": "blank",
+          "price": 2
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/fddce97cf2aa5780769cb26776ea5f52/5E5C75DE/t51.2885-15/sh0.08/e35/c0.175.1406.1406a/s640x640/69113320_175969380112653_8309997079458437444_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
+          "name": "blank",
+          "price": 3
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
+          "name": "blank",
+          "price": 4
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/208e3d9968adb7061aeeccdbdc1303be/5E495FC9/t51.2885-15/e35/p1080x1080/71698015_3338249699526224_2144945737094354810_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
+          "name": "blank",
+          "price": 5
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/66ddf584de29a6da0d1381e98d25c9d8/5E4C56FB/t51.2885-15/e35/p1080x1080/66223744_366900287347456_3307153670765468860_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104",
+          "name": "blank",
+          "price": 6
+        },
+        {
+          "id": 7,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e8e168c37167d6e2dfe1bf6c60f475f0/5E3E09F1/t51.2885-15/e35/p1080x1080/71515672_106537660671180_7038330749765857616_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=100",
+          "name": "blank",
+          "price": 7
+        },
+        {
+          "id": 8,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c79932d9cd29d05aa1e8c520a44bc9ea/5E2AC273/t51.2885-15/e35/p1080x1080/61858642_137648947298425_5341598560885142505_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
+          "name": "blank",
+          "price": 8
+        }
+      ]
+    },
+    "watches": {
+      "title": "watches",
+      "items": [
+        {
+          "id": 1,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
+          "name": "blank",
+          "price": 1
+        },
+        {
+          "id": 2,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e23ff4009d72e001fd1e0a4c5d31757e/5E281A00/t51.2885-15/e35/45381706_2312545535644189_6296970307547359978_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
+          "name": "blank",
+          "price": 2
+        },
+        {
+          "id": 3,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/a444a0190243def502d53089160c02ad/5E64B7DA/t51.2885-15/e35/40482442_323037571588079_5601907009707355494_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=111",
+          "name": "blank",
+          "price": 3
+        },
+        {
+          "id": 4,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/ad21eff767acf4df7c26204bff9e4092/5E2D7908/t51.2885-15/e35/p1080x1080/69374332_1926126927489622_7578215776677615870_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=110",
+          "name": "blank",
+          "price": 4
+        },
+        {
+          "id": 5,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c8c0cf626ac6c1f7770a37911b8b57b5/5E442634/t51.2885-15/e35/p1080x1080/70291236_2475596412766063_5554971941968119403_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=107",
+          "name": "blank",
+          "price": 5
+        },
+        {
+          "id": 6,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c02704f075cc262a620803d9a96a4bab/5E48B70C/t51.2885-15/e35/26869807_391478377980164_2543724944043278336_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
+          "name": "blank",
+          "price": 6
+        },
+        {
+          "id": 7,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/b21c464aa0b8694dceced3d1bf1b6ca4/5E64142E/t51.2885-15/sh0.08/e35/s640x640/18095147_1958091481138701_8892475730462507008_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
+          "name": "blank",
+          "price": 7
+        },
+        {
+          "id": 8,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/9fc10f326b1714a2910ee3031b96efcb/5E650D71/t51.2885-15/sh0.08/e35/s640x640/54204722_320682908637352_5960237557494015140_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104",
+          "name": "blank",
+          "price": 8
+        }
+      ]
+    },
+    "ties": {
+      "title": "ties",
+      "items": [
+        {
+          "id": 1,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 1
+        },
+        {
+          "id": 2,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 2
+        },
+        {
+          "id": 3,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 3
+        },
+        {
+          "id": 4,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 4
+        },
+        {
+          "id": 5,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 5
+        },
+        {
+          "id": 6,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 6
+        },
+        {
+          "id": 7,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 7
+        },
+        {
+          "id": 8,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 8
+        }
+      ]
+    },
+    "shoes": {
+      "title": "shoes",
+      "items": [
+        {
+          "id": 1,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 1
+        },
+        {
+          "id": 2,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 2
+        },
+        {
+          "id": 3,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 3
+        },
+        {
+          "id": 4,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 4
+        },
+        {
+          "id": 5,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 5
+        },
+        {
+          "id": 6,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 6
+        },
+        {
+          "id": 7,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 7
+        },
+        {
+          "id": 8,
+          "imageUrl": "",
+          "name": "blank",
+          "price": 8
+        }
+      ]
+    }
+  }
+}
