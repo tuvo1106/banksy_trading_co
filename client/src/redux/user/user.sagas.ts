@@ -1,5 +1,7 @@
-import { takeLatest, put, all, call } from "redux-saga/effects"
-import UserActionTypes from "./user.types"
+import axios from 'axios'
+
+import { takeLatest, put, all, call } from 'redux-saga/effects'
+import UserActionTypes from './user.types'
 import {
   signInSuccess,
   signInFailure,
@@ -7,14 +9,14 @@ import {
   signOutFailure,
   signUpFailure,
   signUpSuccess
-} from "./user.actions"
+} from './user.actions'
 
 import {
   auth,
   googleProvider,
   createUserProfileDocument,
   getCurrentUser
-} from "../../firebase/firebase.utils"
+} from '../../firebase/firebase.utils'
 
 export function* getSnapshotFromUserAuth(userAuth: any, additionalData = null) {
   try {
@@ -41,8 +43,16 @@ export function* signInWithGoogle() {
 
 export function* signInWithEmail({ payload: { email, password } }: any) {
   try {
-    const { user } = yield auth.signInWithEmailAndPassword(email, password)
-    yield getSnapshotFromUserAuth(user)
+    const data = yield axios({
+      url: '/users/login',
+      method: 'post',
+      data: {
+        email: email,
+        password: password
+      }
+    })
+    console.log(data)
+    yield put(signInSuccess({ email, password }))
   } catch (error) {
     yield put(signInFailure(error))
   }

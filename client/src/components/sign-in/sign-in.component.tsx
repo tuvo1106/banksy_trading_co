@@ -1,20 +1,20 @@
 /* modules */
-import React, { useState } from "react"
-import { connect } from "react-redux"
-import axios from "axios"
+import React, { useState } from 'react'
+import { connect } from 'react-redux'
+import axios from 'axios'
 
 /* components */
-import FormInput from "../form-input/form-input.component"
-import CustomButton from "../custom-button/custom-button.component"
+import FormInput from '../form-input/form-input.component'
+import CustomButton from '../custom-button/custom-button.component'
 
 /* actions */
 import {
   googleSignInStart,
   emailSignInStart
-} from "../../redux/user/user.actions"
+} from '../../redux/user/user.actions'
 
 /* styles */
-import "./sign-in.styles.scss"
+import './sign-in.styles.scss'
 
 interface SignInProps {
   googleSignInStart: (event: any) => void
@@ -26,32 +26,31 @@ export const SignIn = ({
   emailSignInStart
 }: SignInProps): JSX.Element => {
   const [userCreds, setCreds] = useState({
-    email: "",
-    password: ""
+    email: '',
+    password: ''
   })
   const { email, password } = userCreds
 
   const handleSubmit = async (event: any): Promise<any> => {
     event.preventDefault()
 
-    axios({
-      url: '/users/register',
-      method: 'post',
-      data: {
-        email: email,
-        password: password,
-      }
-    })
-      .then((response: any) => {
-        alert('Login successful')
-      })
-      .catch((error: Error) => {
-        console.log(error)
-        alert('Login fail')
-      })
+    // axios({
+    //   url: '/users/register',
+    //   method: 'post',
+    //   data: {
+    //     email: email,
+    //     password: password,
+    //   }
+    // })
+    //   .then((response: any) => {
+    //     alert('Login successful')
+    //   })
+    //   .catch((error: Error) => {
+    //     console.log(error)
+    //     alert('Login fail')
+    //   })
 
-    // eemailSignInStart(email, password)
-    
+    emailSignInStart(email, password)
   }
 
   const handleChange = (event: any): void => {
@@ -60,30 +59,33 @@ export const SignIn = ({
   }
 
   return (
-    <div className='sign-in'>
+    <div className="sign-in">
       <h2>I already have an account</h2>
       <span>Sign in with your email and password.</span>
       <form onSubmit={handleSubmit}>
         <FormInput
-          name='email'
-          type='email'
-          label='email'
+          name="email"
+          type="email"
+          label="email"
           value={email}
           handleChange={handleChange}
-          required></FormInput>
+          required
+        ></FormInput>
         <FormInput
-          name='password'
-          type='password'
-          label='password'
+          name="password"
+          type="password"
+          label="password"
           value={password}
           handleChange={handleChange}
-          required></FormInput>
-        <div className='buttons'>
-          <CustomButton type='submit'>Sign In</CustomButton>
+          required
+        ></FormInput>
+        <div className="buttons">
+          <CustomButton type="submit">Sign In</CustomButton>
           <CustomButton
-            type='button'
+            type="button"
             onClick={googleSignInStart}
-            isGoogleSignIn>
+            isGoogleSignIn
+          >
             Google Sign-In
           </CustomButton>
         </div>
