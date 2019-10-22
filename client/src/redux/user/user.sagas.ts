@@ -51,9 +51,9 @@ export function* signInWithEmail({ payload: { email, password } }: any) {
         password: password
       }
     })
-    console.log(data)
     yield put(signInSuccess({ email, password }))
   } catch (error) {
+    alert('Wrong username/password')
     yield put(signInFailure(error))
   }
 }
@@ -79,10 +79,27 @@ export function* signOut() {
 
 export function* signUp({ payload: { displayName, email, password } }: any) {
   try {
-    const { user } = yield auth.createUserWithEmailAndPassword(email, password)
-    yield createUserProfileDocument(user, { displayName })
-    yield put(signUpSuccess({ user, additionalData: { displayName } }))
+    /* const { user } = yield auth.createUserWithEmailAndPassword(email, password)
+    yield createUserProfileDocument(user, { displayName }) */
+
+    const { data } = yield axios({
+      url: '/users/register',
+      method: 'post',
+      data: {
+        name: displayName,
+        email,
+        password,
+        password2: password
+      }
+    })
+    yield put(
+      signUpSuccess({
+        user: { email: data.email, password: data.password },
+        additionalData: { displayName: data.name }
+      })
+    )
   } catch (error) {
+    alert('Email already exists or passwords do not match')
     yield put(signUpFailure())
   }
 }
