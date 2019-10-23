@@ -25,6 +25,7 @@ coverage
 
 # Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
+build
 
 # Dependency directories
 node_modules
@@ -44,3 +45,6 @@ jspm_packages
 src/firebase/firebase.env.ts
 REDUX.md
 .env
+
+# VS Code files
+.vscode

@@ -1,11 +1,4 @@
-import ShopActionTypes from "./shop.types"
-import { createHttpLink } from "apollo-link-http"
-import { InMemoryCache } from "apollo-cache-inmemory"
-import { ApolloClient, gql } from "apollo-boost"
-import {
-  firestore,
-  convertCollectionsSnapshotToMap
-} from "../../firebase/firebase.utils"
+import ShopActionTypes from './shop.types'
 
 export const fetchCollectionsStart = () => ({
   type: ShopActionTypes.FETCH_COLLECTIONS_START
