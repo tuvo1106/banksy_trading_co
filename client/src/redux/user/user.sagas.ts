@@ -79,10 +79,9 @@ export function* signOut() {
 
 export function* signUp({ payload: { displayName, email, password } }: any) {
   try {
-    /* const { user } = yield auth.createUserWithEmailAndPassword(email, password)
-    yield createUserProfileDocument(user, { displayName }) */
-
-    const { data } = yield axios({
+    const {
+      data: { newUser }
+    } = yield axios({
       url: '/users/register',
       method: 'post',
       data: {
@@ -92,14 +91,12 @@ export function* signUp({ payload: { displayName, email, password } }: any) {
         password2: password
       }
     })
+
     yield put(
-      signUpSuccess({
-        user: { email: data.email, password: data.password },
-        additionalData: { displayName: data.name }
-      })
+      signInSuccess({ email: newUser.email, password: newUser.password })
     )
   } catch (error) {
-    alert('Email already exists or passwords do not match')
+    alert(error)
     yield put(signUpFailure())
   }
 }

@@ -15,7 +15,7 @@ router.get('/register', forwardAuthenticated, (req, res) =>
 )
 
 // Register
-router.post('/register', (req, res) => {
+router.post('/register', async (req, res) => {
   const { name, email, password, password2 } = req.body
   let errors = []
 
@@ -32,60 +32,39 @@ router.post('/register', (req, res) => {
   }
 
   if (errors.length > 0) {
-    console.log(errors)
     res.status(401).json({ errors })
     return
-  } else {
-    User.findOne({ email: email }).then(user => {
-      if (user) {
-        errors.push({ msg: 'Email already exists' })
-        console.log(errors)
-        res.status(401).json({ errors })
-        return
-      } else {
-        const newUser = new User({
-          name,
-          email,
-          password
-        })
-
-        bcrypt.genSalt(10, (err, salt) => {
-          bcrypt.hash(newUser.password, salt, (err, hash) => {
-            if (err) throw err
-            newUser.password = hash
-            newUser
-              .save()
-              .then(user => {
-                res.status(200).json(newUser)
-              })
-              .catch(err => console.log(err))
-          })
-        })
-      }
-    })
   }
-})
+  const user = await User.findOne({ email })
+  if (user) {
+    errors.push({ msg: 'Email already exists' })
+    res.status(401).json({ errors })
+    return
+  }
+  const newUser = new User({
+    name,
+    email,
+    password
+  })
 
-// Login
-// router.post('/login', (req, res, next) => {
-//   passport.authenticate('local', {
-//     successRedirect: '/dashboard',
-//     failureRedirect: '/users/login',
-//     failureFlash: true
-//   })(req, res, next)
-// })
+  bcrypt.genSalt(10, (err, salt) => {
+    bcrypt.hash(newUser.password, salt, (err, hash) => {
+      if (err) throw err
+      newUser.password = hash
+    })
+  })
+
+  await newUser.save()
+  res.status(200).json({ newUser })
+})
 
 router.post('/login', async (req, res) => {
   const { email, password } = req.body
-
   const user = await User.findOne({ email })
-
-  console.log(user)
   if (!user) {
     res.status(401).json({ error: 'Error' })
     return
   }
-  /* if (!user) throw new Error('Wrong username/password') */
 
   bcrypt.compare(password, user.password, (err, isMatch) => {
     if (err) throw err
@@ -93,7 +72,6 @@ router.post('/login', async (req, res) => {
       res.status(200).json({ email: user.email, password })
     } else {
       res.status(401).json({ error: 'Error' })
-      /* throw new Error('Wrong username/password') */
     }
   })
 })
