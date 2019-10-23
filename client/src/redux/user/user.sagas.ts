@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 import { takeLatest, put, all, call } from 'redux-saga/effects'
 import UserActionTypes from './user.types'
 import {
@@ -7,8 +6,7 @@ import {
   signInFailure,
   signOutSuccess,
   signOutFailure,
-  signUpFailure,
-  signUpSuccess
+  signUpFailure
 } from './user.actions'
 
 import {
@@ -43,7 +41,7 @@ export function* signInWithGoogle() {
 
 export function* signInWithEmail({ payload: { email, password } }: any) {
   try {
-    const data = yield axios({
+    yield axios({
       url: '/users/login',
       method: 'post',
       data: {
@@ -125,17 +123,12 @@ export function* onSignUpStart() {
   yield takeLatest(UserActionTypes.SIGN_UP_START, signUp)
 }
 
-export function* onSignUpSuccess() {
-  yield takeLatest(UserActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp)
-}
-
 export function* userSagas() {
   yield all([
     call(onGoogleSignInStart),
     call(onEmailSignInStart),
     call(isUserAuthenticated),
     call(onSignOutStart),
-    call(onSignUpStart),
-    call(onSignUpSuccess)
+    call(onSignUpStart)
   ])
 }
