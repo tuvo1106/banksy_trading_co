@@ -1,15 +1,17 @@
 /* modules */
-import React from "react"
+import React from 'react'
 
 /* components */
-import Directory from "../../components/directory/directory.component"
+import Directory from '../../components/directory/directory.component'
+import CarouselContainer from '../../components/carousel-container/carousel-container.component'
 
 /* styles */
-import "./homepage.styles.scss"
+import './homepage.styles.scss'
 
 const HomePage = (): JSX.Element => (
-  <div className='homepage'>
-    <Directory></Directory>
+  <div className="homepage">
+    <CarouselContainer />
+    <Directory />
   </div>
 )
 
