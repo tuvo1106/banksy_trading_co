@@ -17,18 +17,17 @@ export function* fetchCollectionsAsync() {
     yield put(fetchCollectionsSuccess(collectionsMap)) */
 
     const http = yield createHttpLink({
-      uri: "https://banksyco.tk/"
+       uri: "https://banksyco.tk/"
     })
     const cache = new InMemoryCache()
     const client = new ApolloClient({
       link: http,
       cache
     })
-    const res = yield client.query({
+    const queryArg: any = {
       query: gql`
         {
           all {
-            id
             title
             routeName
             items {
@@ -40,7 +39,8 @@ export function* fetchCollectionsAsync() {
           }
         }
       `
-    })
+    }
+    const res = yield call(client.query, queryArg)
     const collections = res.data.all
     const collectionsMap: any = {}
     collections.forEach((element: any) => {
