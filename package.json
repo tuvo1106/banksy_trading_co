@@ -16,6 +16,7 @@
     "test": "cd client && npm test"
   },
   "dependencies": {
+    "@types/styled-components": "^4.1.19",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
