@@ -1,0 +1,16 @@
+.carousel {
+    overflow: hidden;
+    height: 600px;
+    margin-bottom: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.carousel-inner>.item>img {
+    margin: 0 auto;
+
+}
+
+.carousel-caption {
+    bottom: 325px !important;
+}
