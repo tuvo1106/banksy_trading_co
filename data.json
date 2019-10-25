@@ -53,109 +53,109 @@
         }
       ]
     },
-    "professional": {
-      "title": "professional",
+    "casual": {
+      "title": "casual",
       "items": [
         {
-          "id": 1,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/2cf8738c0b1cdfef81e2d8db4ebb3f14/5E3EEDE9/t51.2885-15/sh0.08/e35/c0.110.928.928a/s640x640/37931307_437455623406563_7751280603265236992_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=103",
-          "name": "Floral Skinny Tie",
-          "price": 49
-        },
-        {
-          "id": 2,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/66ddf584de29a6da0d1381e98d25c9d8/5E4C56FB/t51.2885-15/e35/p1080x1080/66223744_366900287347456_3307153670765468860_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104",
-          "name": "Purple Skinny Tie",
-          "price": 35
-        },
-        {
-          "id": 3,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/fddce97cf2aa5780769cb26776ea5f52/5E5C75DE/t51.2885-15/sh0.08/e35/c0.175.1406.1406a/s640x640/69113320_175969380112653_8309997079458437444_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
-          "name": "Dazi Ventura Floral",
-          "price": 89
-        },
-        {
-          "id": 4,
+          "id": 9,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "Blue Cotton Tie",
-          "price": 25
+          "name": "Blue Jacket",
+          "price": 249
         },
         {
-          "id": 5,
+          "id": 10,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/66ddf584de29a6da0d1381e98d25c9d8/5E4C56FB/t51.2885-15/e35/p1080x1080/66223744_366900287347456_3307153670765468860_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104",
+          "name": "Black Short-Sleeve Flannel",
+          "price": 112
+        },
+        {
+          "id": 11,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/fddce97cf2aa5780769cb26776ea5f52/5E5C75DE/t51.2885-15/sh0.08/e35/c0.175.1406.1406a/s640x640/69113320_175969380112653_8309997079458437444_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
+          "name": "Green Hoodie",
+          "price": 172
+        },
+        {
+          "id": 12,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
+          "name": "Blue Jacket",
+          "price": 249
+        },
+        {
+          "id": 13,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/208e3d9968adb7061aeeccdbdc1303be/5E495FC9/t51.2885-15/e35/p1080x1080/71698015_3338249699526224_2144945737094354810_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
-          "name": "Yellow Striped Tie",
-          "price": 40
+          "name": "Grey Jacket",
+          "price": 124
         },
         {
-          "id": 6,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/215454bea6e97474d4e61554938522d0/5E44E9E9/t51.2885-15/e35/26187926_195241104365492_5113123458825322496_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
-          "name": "Skinny Black Tie",
+          "id": 14,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e23ff4009d72e001fd1e0a4c5d31757e/5E281A00/t51.2885-15/e35/45381706_2312545535644189_6296970307547359978_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
+          "name": "Tan Overcoat",
           "price": 19
         },
         {
-          "id": 7,
+          "id": 15,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e8e168c37167d6e2dfe1bf6c60f475f0/5E3E09F1/t51.2885-15/e35/p1080x1080/71515672_106537660671180_7038330749765857616_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=100",
-          "name": "Arancia Floral Tie",
+          "name": "Blue Button-Up",
           "price": 44
         },
         {
-          "id": 8,
+          "id": 16,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c79932d9cd29d05aa1e8c520a44bc9ea/5E2AC273/t51.2885-15/e35/p1080x1080/61858642_137648947298425_5341598560885142505_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "Red Silk Tie",
-          "price": 27
+          "name": "Grey Jean Jacket",
+          "price": 331
         }
       ]
     },
-    "casual": {
-      "title": "Casual",
+    "professional": {
+      "title": "Professional",
       "items": [
         {
-          "id": 1,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "blank",
-          "price": 1
+          "id": 17,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/2cf8738c0b1cdfef81e2d8db4ebb3f14/5E3EEDE9/t51.2885-15/sh0.08/e35/c0.110.928.928a/s640x640/37931307_437455623406563_7751280603265236992_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=103",
+          "name": "Armani Green Suit",
+          "price": 850
         },
         {
-          "id": 2,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e23ff4009d72e001fd1e0a4c5d31757e/5E281A00/t51.2885-15/e35/45381706_2312545535644189_6296970307547359978_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "blank",
-          "price": 2
+          "id": 18,
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/215454bea6e97474d4e61554938522d0/5E44E9E9/t51.2885-15/e35/26187926_195241104365492_5113123458825322496_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
+          "name": "J. Crew Grey",
+          "price": 229
         },
         {
-          "id": 3,
+          "id": 19,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/a444a0190243def502d53089160c02ad/5E64B7DA/t51.2885-15/e35/40482442_323037571588079_5601907009707355494_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=111",
-          "name": "blank",
-          "price": 3
+          "name": "Indochino Tuxedo",
+          "price": 475
         },
         {
-          "id": 4,
+          "id": 20,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/ad21eff767acf4df7c26204bff9e4092/5E2D7908/t51.2885-15/e35/p1080x1080/69374332_1926126927489622_7578215776677615870_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=110",
-          "name": "blank",
-          "price": 4
+          "name": "Ralph Lauren Blue Skinny",
+          "price": 699
         },
         {
-          "id": 5,
+          "id": 21,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c8c0cf626ac6c1f7770a37911b8b57b5/5E442634/t51.2885-15/e35/p1080x1080/70291236_2475596412766063_5554971941968119403_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=107",
-          "name": "blank",
-          "price": 5
+          "name": "Banana Republic Tweed",
+          "price": 719
         },
         {
-          "id": 6,
+          "id": 22,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c02704f075cc262a620803d9a96a4bab/5E48B70C/t51.2885-15/e35/26869807_391478377980164_2543724944043278336_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
-          "name": "blank",
-          "price": 6
+          "name": "Harry Brown Light Grey",
+          "price": 479
         },
         {
-          "id": 7,
+          "id": 23,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/b21c464aa0b8694dceced3d1bf1b6ca4/5E64142E/t51.2885-15/sh0.08/e35/s640x640/18095147_1958091481138701_8892475730462507008_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
-          "name": "blank",
-          "price": 7
+          "name": "ASOS Checkered Blue",
+          "price": 44
         },
         {
-          "id": 8,
+          "id": 24,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/9fc10f326b1714a2910ee3031b96efcb/5E650D71/t51.2885-15/sh0.08/e35/s640x640/54204722_320682908637352_5960237557494015140_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104",
-          "name": "blank",
-          "price": 8
+          "name": "Brunello Navy Skinny",
+          "price": 27
         }
       ]
     },
@@ -163,52 +163,52 @@
       "title": "ties",
       "items": [
         {
-          "id": 1,
+          "id": 25,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/575e2a51a35f9e215800828798df8e61/5E4A1B77/t51.2885-15/fr/e15/p1080x1080/66271779_758850704548296_3163376767986455020_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=100",
-          "name": "blank",
-          "price": 1
+          "name": "Armani Skinny Tie",
+          "price": 49
         },
         {
-          "id": 2,
+          "id": 26,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/8e2c614322e6d39c5839484f8e69b46a/5E5C7D44/t51.2885-15/e35/53927347_127553545051026_6881894369051037803_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106",
-          "name": "blank",
-          "price": 2
+          "name": "Givency Purple Skinny",
+          "price": 35
         },
         {
-          "id": 3,
+          "id": 27,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/a8c9d06e8d96f9b6ca5d508a0c19f3fc/5E4D421E/t51.2885-15/e35/49907294_405112876727345_2930822191632181315_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105",
-          "name": "blank",
-          "price": 3
+          "name": "Dazi Ventura Floral",
+          "price": 89
         },
         {
-          "id": 4,
+          "id": 28,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/bced3896da10c8ba6d1dbc776f1685b1/5E64F7A0/t51.2885-15/e35/47586031_319324315421105_1826810189756849350_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105",
-          "name": "blank",
-          "price": 4
+          "name": "Tom Ford Blue Cotton",
+          "price": 25
         },
         {
-          "id": 5,
+          "id": 29,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/543fd37243eb8544954f50d3b4205fb8/5E2AE975/t51.2885-15/e35/43405545_2206556909668918_3697797971748632192_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
-          "name": "blank",
-          "price": 5
+          "name": "Gucci Yellow Striped",
+          "price": 40
         },
         {
-          "id": 6,
+          "id": 30,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/45b7dc26a7329ca05122127e8cd26a67/5E61E7A1/t51.2885-15/e35/42003095_309821596467101_2358085771613407085_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105",
-          "name": "blank",
-          "price": 6
+          "name": "Hermes Skinny Black",
+          "price": 19
         },
         {
-          "id": 7,
+          "id": 31,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/cf2d74a147b3cac4301f3fb0a27b2d65/5E62D126/t51.2885-15/e35/40497380_963304390539525_8597168047070904320_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=109",
-          "name": "blank",
-          "price": 7
+          "name": "Arancia Floral",
+          "price": 44
         },
         {
-          "id": 8,
+          "id": 32,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/df16c2611f2ea994b28485bed41497f4/5E4140C8/t51.2885-15/e35/34858789_1896394117091174_2756367117010862080_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=102",
-          "name": "blank",
-          "price": 8
+          "name": "J. Crew Red Silk",
+          "price": 27
         }
       ]
     },
@@ -216,51 +216,51 @@
       "title": "shoes",
       "items": [
         {
-          "id": 1,
+          "id": 33,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/d00653af48399ed3e27e8c29c9b4a2c5/5E5B5E3D/t51.2885-15/e35/43387175_301600243770937_2091726725415681844_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=101",
-          "name": "blank",
+          "name": "Salvatore F. Brown",
           "price": 1
         },
         {
-          "id": 2,
+          "id": 34,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/107c6159807ec36ebff8b78ce1b11e15/5E46D320/t51.2885-15/e35/51472599_142697910101410_8503926576189071749_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
-          "name": "blank",
+          "name": "J. Crew Suede Green",
           "price": 2
         },
         {
-          "id": 3,
+          "id": 35,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/c8090d7effc77a0e6979ea815f011336/5E62E5AF/t51.2885-15/e35/47692013_764160817280924_8037946486918537700_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=108",
-          "name": "blank",
+          "name": "Calvin Klein Black",
           "price": 3
         },
         {
-          "id": 4,
+          "id": 36,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/7c26c91b4bd5991aad642a6abfb4a973/5E4D0B3E/t51.2885-15/e35/31911787_172035146806266_8895479609114492928_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106",
-          "name": "blank",
+          "name": "Cole Haan Dark Brown",
           "price": 4
         },
         {
-          "id": 5,
+          "id": 37,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/0d59df24eeb81812849c8e686512cc4a/5E29E512/t51.2885-15/e35/26181930_351072755360709_546991018885513216_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=109",
-          "name": "blank",
+          "name": "Giani Snakeskin Black",
           "price": 5
         },
         {
-          "id": 6,
+          "id": 38,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/271faf1387d6afefc532a5f377386af4/5E628F52/t51.2885-15/sh0.08/e35/s640x640/22709143_124982864853106_8195691160123998208_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
-          "name": "blank",
+          "name": "Striker Chukka Brown",
           "price": 6
         },
         {
-          "id": 7,
+          "id": 39,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/17ecef36b1c18613f0f070dc4a2a4be9/5E562A78/t51.2885-15/e35/69296182_538620070215478_4368087170188238603_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
-          "name": "blank",
+          "name": "Bannister Derby Black",
           "price": 7
         },
         {
-          "id": 8,
+          "id": 40,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/17b0809f8971531315572ffa50befab9/5E4C53C9/t51.2885-15/e35/20582563_928083037348726_3633426681831620608_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
-          "name": "blank",
+          "name": "Christian Loboutin Green",
           "price": 8
         }
       ]
