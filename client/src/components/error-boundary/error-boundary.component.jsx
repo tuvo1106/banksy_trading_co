@@ -8,8 +8,8 @@ import {
 
 class ErrorBoundary extends Component {
   /* catches all errors in child components */
-  constructor({}) {
-    super({})
+  constructor() {
+    super()
 
     this.state = {
       hasErrored: false
