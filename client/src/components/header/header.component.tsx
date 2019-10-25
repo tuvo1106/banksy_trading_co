@@ -1,26 +1,26 @@
 /* modules */
-import React from "react"
-import { Link } from "react-router-dom"
-import { connect } from "react-redux"
-import { createStructuredSelector } from "reselect"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { createStructuredSelector } from 'reselect'
 
 /* components */
-import CartIcon from "../cart-icon/cart-icon.component"
-import CartDropdown from "../cart-dropdown/cart-dropdown.component"
-import { ReactComponent as Logo } from "../../assets/icon.svg"
+import CartIcon from '../cart-icon/cart-icon.component'
+import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+import { ReactComponent as Logo } from '../../assets/icon.svg'
 
 /* selectors */
-import { selectCartHidden } from "../../redux/cart/cart.selectors"
-import { selectCurrentUser } from "../../redux/user/user.selector"
+import { selectCartHidden } from '../../redux/cart/cart.selectors'
+import { selectCurrentUser } from '../../redux/user/user.selector'
 
 /* actions */
-import { signOutStart } from "../../redux/user/user.actions"
+import { signOutStart } from '../../redux/user/user.actions'
 
 /* interfaces */
-import { user } from "../../interfaces/user"
+import { user } from '../../interfaces/user'
 
 /* styles */
-import "./header.styles.scss"
+import './header.styles.scss'
 
 interface HeaderProps {
   currentUser: user | null
@@ -33,20 +33,24 @@ export const Header = ({
   hidden,
   signOutStart
 }: HeaderProps): JSX.Element => (
-  <div className='header'>
-    <Link className='logo-container' to='/'>
-      <Logo className='logo'></Logo>
+  <div className="header">
+    <Link className="logo-container" to="/">
+      <Logo className="logo"></Logo>
     </Link>
-    <div className='options'>
-      <Link className='option' to='/shop'>
+    <Link to="/">
+      <div className="brand">Banksy</div>
+    </Link>
+
+    <div className="options">
+      <Link className="option" to="/shop">
         Shop
       </Link>
       {currentUser ? (
-        <div className='option' onClick={signOutStart}>
+        <div className="option" onClick={signOutStart}>
           Sign Out
         </div>
       ) : (
-        <Link className='option' to='/signin'>
+        <Link className="option" to="/signin">
           Sign In
         </Link>
       )}
