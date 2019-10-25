@@ -16,10 +16,11 @@
     "test": "cd client && npm test"
   },
   "dependencies": {
+    "@types/styled-components": "^4.1.19",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "bootstrap": "^4.3.1",
-    "compression": "1.7.4",
+    "compression": "^1.7.4",
     "connect-flash": "^0.1.1",
     "cors": "2.8.5",
     "dotenv": "7.0.0",

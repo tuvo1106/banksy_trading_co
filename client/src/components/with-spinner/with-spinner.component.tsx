@@ -1,25 +1,19 @@
 /* modules */
 import React, { Component } from "react"
 
-/* styles */
-import { SpinnerContainer, SpinnerOverlay } from "./with-spinner.styles"
+/* components */
+import Spinner from "../spinner/spinner.component"
 
 interface SpinnerProps {
   isLoading: Boolean
   [key: string]: any
 }
 
-const WithSpinner = (WrappedComponent: typeof Component): Function => {
-  const Spinner = ({ isLoading, ...otherProps }: SpinnerProps): JSX.Element => {
-    return isLoading ? (
-      <SpinnerOverlay>
-        <SpinnerContainer />
-      </SpinnerOverlay>
-    ) : (
-      <WrappedComponent {...otherProps} />
-    )
-  }
-  return Spinner
+const WithSpinner = (WrappedComponent: typeof Component) => ({
+  isLoading,
+  ...otherProps
+}: SpinnerProps): JSX.Element => {
+  return isLoading ? <Spinner></Spinner> : <WrappedComponent {...otherProps} />
 }
 
 export default WithSpinner

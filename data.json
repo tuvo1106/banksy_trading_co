@@ -7,7 +7,7 @@
         {
           "id": 1,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/ece10f8bb1d9b9d79f7a007ef7aea392/5E480FA7/t51.2885-15/e35/s1080x1080/72338377_183256382713173_8959500961470871062_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=109",
-          "name": "NB1000 Adventure Sport",
+          "name": "Adventure Sport",
           "price": 3699
         },
         {
@@ -31,25 +31,25 @@
         {
           "id": 5,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/98bc7052b10ac685d179a903bac493dc/5E2C4D13/t51.2885-15/e35/p1080x1080/67815810_454378681813964_1029591033038909469_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=108",
-          "name": "AP Royal Oak Yellow Gold",
+          "name": "AP Royal Gold",
           "price": 17999
         },
         {
           "id": 6,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/4115405c77b1aff05683b64e7c9c482f/5E558F96/t51.2885-15/e35/s1080x1080/66208783_2419725761417164_9152872654075137742_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=104",
-          "name": "Norquain Independence 19",
+          "name": "Norquain Independence",
           "price": 4499
         },
         {
           "id": 7,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/e2c8d3bf6ff11caa81e2c8fd53dd9227/5E652A8A/t51.2885-15/e35/s1080x1080/64314084_638040850014606_7407511196061779889_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106",
-          "name": "Grand Lange 1",
+          "name": "Grand Lange",
           "price": 8259
         },
         {
           "id": 8,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/43518949e6a2b6bbd76bd015e3f53cc3/5E2D9B8A/t51.2885-15/e35/61478447_2427240484174091_6023202868536055276_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=111",
-          "name": "N2000 Freedom 60",
+          "name": "Freedom Fighter",
           "price": 11399
         }
       ]
@@ -61,49 +61,49 @@
         {
           "id": 9,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "Blue Jacket",
+          "name": "Calvin Klein Jacket",
           "price": 189
         },
         {
           "id": 10,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/66ddf584de29a6da0d1381e98d25c9d8/5E4C56FB/t51.2885-15/e35/p1080x1080/66223744_366900287347456_3307153670765468860_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=104",
-          "name": "Black Short-Sleeve Flannel",
+          "name": "Gucci Short-Sleeve",
           "price": 49
         },
         {
           "id": 11,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/fddce97cf2aa5780769cb26776ea5f52/5E5C75DE/t51.2885-15/sh0.08/e35/c0.175.1406.1406a/s640x640/69113320_175969380112653_8309997079458437444_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
-          "name": "Green Hoodie",
-          "price": 39
+          "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/341f79c644452fe24194d79c2501eea0/5E4C63EC/t51.2885-15/e35/70259526_168408440975470_3458083500406070453_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=110",
+          "name": "Gucci Red Jacket",
+          "price": 109
         },
         {
           "id": 12,
-          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/02fbe7b730507355440d5c2e83072cbb/5E4566AA/t51.2885-15/e35/p1080x1080/60072987_144409066723945_2615180832244486584_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "Blue Jacket",
-          "price": 249
+          "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/fddce97cf2aa5780769cb26776ea5f52/5E5C75DE/t51.2885-15/sh0.08/e35/c0.175.1406.1406a/s640x640/69113320_175969380112653_8309997079458437444_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=109",
+          "name": "Uniqlo Green Hoodie",
+          "price": 39
         },
         {
           "id": 13,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/208e3d9968adb7061aeeccdbdc1303be/5E495FC9/t51.2885-15/e35/p1080x1080/71698015_3338249699526224_2144945737094354810_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=108",
-          "name": "Grey Jacket",
+          "name": "J. Crew Grey Jacket",
           "price": 159
         },
         {
           "id": 14,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e23ff4009d72e001fd1e0a4c5d31757e/5E281A00/t51.2885-15/e35/45381706_2312545535644189_6296970307547359978_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "Tan Overcoat",
+          "name": "Armani Tan Overcoat",
           "price": 119
         },
         {
           "id": 15,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/e8e168c37167d6e2dfe1bf6c60f475f0/5E3E09F1/t51.2885-15/e35/p1080x1080/71515672_106537660671180_7038330749765857616_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=100",
-          "name": "Blue Button-Up",
+          "name": "Banana Button-Up",
           "price": 49
         },
         {
           "id": 16,
           "imageUrl": "https://scontent-lax3-1.cdninstagram.com/vp/c79932d9cd29d05aa1e8c520a44bc9ea/5E2AC273/t51.2885-15/e35/p1080x1080/61858642_137648947298425_5341598560885142505_n.jpg?_nc_ht=scontent-lax3-1.cdninstagram.com&_nc_cat=101",
-          "name": "Grey Jean Jacket",
+          "name": "Guess Jean Jacket",
           "price": 79
         }
       ]
@@ -169,12 +169,12 @@
         {
           "id": 25,
           "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/575e2a51a35f9e215800828798df8e61/5E4A1B77/t51.2885-15/fr/e15/p1080x1080/66271779_758850704548296_3163376767986455020_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=100",
-          "name": "Armani Skinny Tie",
+          "name": "Armani Skinny",
           "price": 49
         },
         {
           "id": 26,
-          "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/8e2c614322e6d39c5839484f8e69b46a/5E5C7D44/t51.2885-15/e35/53927347_127553545051026_6881894369051037803_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106",
+          "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/45b7dc26a7329ca05122127e8cd26a67/5E61E7A1/t51.2885-15/e35/42003095_309821596467101_2358085771613407085_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105",
           "name": "Givency Purple Skinny",
           "price": 39
         },
@@ -198,7 +198,7 @@
         },
         {
           "id": 30,
-          "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/45b7dc26a7329ca05122127e8cd26a67/5E61E7A1/t51.2885-15/e35/42003095_309821596467101_2358085771613407085_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=105",
+          "imageUrl": "https://scontent-sjc3-1.cdninstagram.com/vp/8e2c614322e6d39c5839484f8e69b46a/5E5C7D44/t51.2885-15/e35/53927347_127553545051026_6881894369051037803_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com&_nc_cat=106",
           "name": "Hermes Skinny Black",
           "price": 19
         },

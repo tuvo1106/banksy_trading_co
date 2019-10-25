@@ -1,16 +1,16 @@
 .carousel {
-    overflow: hidden;
-    height: 600px;
-    margin-bottom: 20px;
-    margin-left: 5px;
-    margin-right: 5px;
+  overflow: hidden;
+  height: 75%;
+  width: 100%;
+  margin-bottom: 20px;
+  margin-left: 25px;
+  margin-right: 25px;
 }
 
-.carousel-inner>.item>img {
-    margin: 0 auto;
-
+.carousel-inner > .item > img {
+  margin: 0 auto;
 }
 
-.carousel-caption {
-    bottom: 325px !important;
-}
+// .carousel-caption {
+//     bottom: 325px !important;
+// }
