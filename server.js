@@ -4,14 +4,7 @@ const bodyParse = require("body-parser")
 const path = require("path")
 const compression = require("compression")
 const enforce = require('express-sslify')
-
-// New Code
-const expressLayouts = require("express-ejs-layouts")
 const mongoose = require("mongoose")
-const passport = require("passport")
-const flash = require("connect-flash")
-const session = require("express-session")
-// end
 
 if (process.env.NODE_ENV !== "production") {
   require("dotenv").config()
