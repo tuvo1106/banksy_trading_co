@@ -36,22 +36,6 @@ An E-commerce web application for selling men's suits and accessories. This proj
 
 ## Technologies
 
-Front-end
-
-- React - version 16.10
-- Typescript - version 3.6.4
-- Redux - version 4.0.4
-- Redux Saga - versions 1.1
-
-Back-end
-
-- NodeJS - version 10.14.2
-- Express - version 4.16.4
-- MongoDB - version 4.2
-- Mongoose - version 5.4.1
-
-<p align="center">Tech Stack</p>
-
 ![Tech Stack](https://i.imgur.com/zb5ld5f.png)
 
 ## Setup
@@ -63,29 +47,47 @@ npm run launch
 
 ## Code Examples
 
-Show examples of usage:
-`put-your-code-here`
+All components are functional and written in Typescript:
+
+```javascript
+interface CartIconProps {
+  toggleCartHidden: (event: any) => void
+  itemCount: number
+}
+
+export const CartIcon = ({
+  toggleCartHidden,
+  itemCount
+}: CartIconProps): JSX.Element => (
+  <div className='cart-icon' onClick={toggleCartHidden}>
+    <ShoppingIcon className='shopping-icon'></ShoppingIcon>
+    <span className='item-count'>{itemCount}</span>
+  </div>
+)
+```
 
 ## Features
 
-List of features ready and TODOs for future development
+- Users can be authenticated using Google Sign In or by creating a new account
+- Cart data persists throughout browser sessions using localStorage
+- Payments are handled via external Stripe API
+- Clothing/accessory models are stored in Mongo and retrieved dynamically
 
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+Considerations for improvement: 
 
-To-do list:
-
-- Wow improvement to be done 1
-- Wow improvement to be done 2
+- Expand inventory models with options for stock quantity, size, alt angles
+- Save cart persistence on database for logged in users
+- Better pop-up messages for error handling
 
 ## Status
 
-Project is: _in progress_
+Project is deployed on Heroku!
+
+[Banksy-Trading-Co](https://banksy-trading-co.herokuapp.com)
 
 ## Inspiration
 
-Add here credits. Project inspired by..., based on...
+Andrei Neagoie and Yihua Zhang's React Udemy
 
 ## Contact
 
