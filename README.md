@@ -21,7 +21,7 @@ An E-commerce web application for selling men's suits and accessories. This proj
   - Promises
   - Currying
   - Scope/Closures
-  - Async / await
+  - Async / Await
   - Generators
 
 ## Screenshots
@@ -68,7 +68,7 @@ export const CartIcon = ({
 
 ## Features
 
-- Users can be authenticated using Google Sign In or by creating a new account
+- Users can be authenticated using Google Sign-In or by creating a new account
 - Cart data persists throughout browser sessions using localStorage
 - Payments are handled via external Stripe API
 - Clothing/accessory models are stored in Mongo and retrieved dynamically
