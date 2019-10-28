@@ -4,7 +4,7 @@ An E-commerce web application for selling men's suits and accessories. This proj
 
 ## Table of contents
 
-- [General info](#general-info)
+- [Motivations](#motivations)
 - [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
@@ -13,25 +13,46 @@ An E-commerce web application for selling men's suits and accessories. This proj
 - [Inspiration](#inspiration)
 - [Contact](#contact)
 
-## General info
+## Motivations
 
-Add more general information about project. What the purpose of the project is? Motivation?
+- Solve a modern business problem
+  - E-commerce
+- Dive deep into JS and ES2015+ features
+  - Promises
+  - Currying
+  - Scope/Closures
+  - Async / await
+  - Generators
 
 ## Screenshots
 
-![Example screenshot](./img/screenshot.png)
+![Front Page](https://i.imgur.com/ixVwWeg.png)
+
+![Shop Page](https://i.imgur.com/ooQeDNb.jpg)
 
 ## Technologies
 
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+Front-end
+
+- React - version 16.10
+- Typescript - version 3.6.4
+- Redux - version 4.0.4
+- Redux Saga - versions 1.1
+
+Back-end
+
+- NodeJS - version 10.14.2
+- Express - version 4.16.4
+- MongoDB - version 4.2
+- Mongoose - version 5.4.1
+
+![Tech Stack](https://imgur.com/a/zUu5nkp)
 
 ## Setup
 
 ```
 npm install
-npm run
+npm run launch
 ```
 
 ## Code Examples
