@@ -87,7 +87,7 @@ Project is deployed on Heroku!
 
 ## Inspiration
 
-Andrei Neagoie and Yihua Zhang's React Udemy
+Andrei Neagoie and Yihua Zhang's Intro to React course on Udemy
 
 ## Contact
 
