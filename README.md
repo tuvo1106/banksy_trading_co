@@ -27,9 +27,11 @@ An E-commerce web application for selling men's suits and accessories. This proj
 ## Screenshots
 
 <p align="center">Front Page</p>
+
 ![Front Page](https://i.imgur.com/ixVwWeg.png)
 
 <p align="center">Shop Page</p>
+
 ![Shop Page](https://i.imgur.com/ooQeDNb.jpg)
 
 ## Technologies
@@ -49,6 +51,7 @@ Back-end
 - Mongoose - version 5.4.1
 
 <p align="center">Tech Stack</p>
+
 ![Tech Stack](https://i.imgur.com/zb5ld5f.png)
 
 ## Setup
