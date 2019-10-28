@@ -26,10 +26,12 @@ An E-commerce web application for selling men's suits and accessories. This proj
 
 ## Screenshots
 
-Front Page
+<p align="center">Front Page</p>
+
 ![Front Page](https://i.imgur.com/ixVwWeg.png)
 
-Shop Page
+<p align="center">Shop Page</p>
+
 ![Shop Page](https://i.imgur.com/ooQeDNb.jpg)
 
 ## Technologies
