@@ -1,1 +1,0 @@
-web: node ./api/v2/grapql-server/server.js
