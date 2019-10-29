@@ -32,6 +32,7 @@ interface CollectionPageProps extends ownProps {
 export const CollectionPage = ({
   collection
 }: CollectionPageProps): JSX.Element => {
+  if (!collection) throw Error
   const { title, items } = collection
   return (
     <div className='collection-page'>
