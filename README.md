@@ -37,6 +37,8 @@ An E-commerce web application for selling men's suits and accessories. This proj
 ## Technologies
 
 ![Tech Stack](https://i.imgur.com/zb5ld5f.png)
+=======
+![Tech Stack](https://i.imgur.com/O2kRTzS.png)
 
 ## Setup
 
