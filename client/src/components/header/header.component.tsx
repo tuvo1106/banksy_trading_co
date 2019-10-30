@@ -36,7 +36,7 @@ export const Header = ({
     <Link className="logo-container" to="/">
       <img className="logo" src="banksy.png"/>
     </Link>
-
+    <img className="logo" src="banksy.png"/>
     <div className="options">
       <Link className="option" to="/shop">
         Shop
