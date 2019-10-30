@@ -1,5 +1,5 @@
 .header {
-  height: 70px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -13,6 +13,12 @@
 
   .logo {
     height: 40px;
+  }
+
+  img.logo {
+    height: 6em;
+    position: absolute;
+    left: 3em;
   }
 
   .logo-container {
@@ -42,4 +48,10 @@
       cursor: pointer;
     }
   }
+}
+
+.brand {
+  position: absolute;
+  left: 125px;
+  top: 45px;
 }

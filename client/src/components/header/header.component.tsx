@@ -7,7 +7,7 @@ import { createStructuredSelector } from 'reselect'
 /* components */
 import CartIcon from '../cart-icon/cart-icon.component'
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
-import { ReactComponent as Logo } from '../../assets/icon.svg'
+import { ReactComponent as Logo } from '../../assets/banksy.svg'
 
 /* selectors */
 import { selectCartHidden } from '../../redux/cart/cart.selectors'
@@ -35,9 +35,9 @@ export const Header = ({
 }: HeaderProps): JSX.Element => (
   <div className="header">
     <Link className="logo-container" to="/">
-      <Logo className="logo"></Logo>
+      {/* <Logo className="logo"></Logo> */}
+      <img className="logo" src="banksy.png" />
     </Link>
-
     <div className="options">
       <Link className="option" to="/shop">
         Shop

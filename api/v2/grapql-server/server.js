@@ -47,8 +47,9 @@ mongoose
       //   playground: '/playground',
       // };
 
+      const port = process.env.PORT || 5000
       const server = new GraphQLServer({ typeDefs, resolvers });
-      server.start(() => console.log("Server is running on localhost:4000"));
+      server.start({ port }, () => console.log("Server is running on localhost:" + port));
     });
   })
   .catch(err => {
