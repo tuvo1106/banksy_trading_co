@@ -4,7 +4,7 @@ An E-commerce web application for selling men's suits and accessories. This proj
 
 ## Table of contents
 
-- [General info](#general-info)
+- [Motivations](#motivations)
 - [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [Setup](#setup)
@@ -13,52 +13,81 @@ An E-commerce web application for selling men's suits and accessories. This proj
 - [Inspiration](#inspiration)
 - [Contact](#contact)
 
-## General info
+## Motivations
 
-Add more general information about project. What the purpose of the project is? Motivation?
+- Solve a modern business problem
+  - E-commerce
+- Dive deep into JS and ES2015+ features
+  - Promises
+  - Currying
+  - Scope/Closures
+  - Async / Await
+  - Generators
 
 ## Screenshots
 
-![Example screenshot](./img/screenshot.png)
+<p align="center">Front Page</p>
+
+![Front Page](https://i.imgur.com/ixVwWeg.png)
+
+<p align="center">Shop Page</p>
+
+![Shop Page](https://i.imgur.com/ooQeDNb.jpg)
 
 ## Technologies
 
-- Tech 1 - version 1.0
-- Tech 2 - version 2.0
-- Tech 3 - version 3.0
+![Tech Stack](https://i.imgur.com/zb5ld5f.png)
 
 ## Setup
 
 ```
 npm install
-npm run
+npm run launch
 ```
 
 ## Code Examples
 
-Show examples of usage:
-`put-your-code-here`
+All components are functional and written in Typescript:
+
+```javascript
+interface CartIconProps {
+  toggleCartHidden: (event: any) => void
+  itemCount: number
+}
+
+export const CartIcon = ({
+  toggleCartHidden,
+  itemCount
+}: CartIconProps): JSX.Element => (
+  <div className='cart-icon' onClick={toggleCartHidden}>
+    <ShoppingIcon className='shopping-icon'></ShoppingIcon>
+    <span className='item-count'>{itemCount}</span>
+  </div>
+)
+```
 
 ## Features
 
-List of features ready and TODOs for future development
+- Users can be authenticated using Google Sign-In or by creating a new account
+- Cart data persists throughout browser sessions using localStorage
+- Payments are handled via external Stripe API
+- Clothing/accessory models are stored in Mongo and retrieved dynamically
 
-- Awesome feature 1
-- Awesome feature 2
-- Awesome feature 3
+Considerations for improvement: 
 
-To-do list:
-
-- Wow improvement to be done 1
-- Wow improvement to be done 2
+- Expand inventory models with options for stock quantity, size, alt angles
+- Save cart persistence on database for logged in users
+- Better pop-up messages for error handling
 
 ## Status
 
-Project is: _in progress_
+Project is deployed on Heroku!
+
+[Banksy-Trading-Co](https://banksy-trading-co.herokuapp.com)
 
 ## Inspiration
 
-Add here credits. Project inspired by..., based on...
+Andrei Neagoie and Yihua Zhang's Intro to React course on Udemy
 
 ## Contact
 
