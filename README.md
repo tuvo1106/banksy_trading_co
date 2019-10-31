@@ -64,6 +64,12 @@ Build script will create a `build` directory with a compiled JavaScript code whi
 npm run build
 ```
 
+### Testing
+As a testing frameworking we are uisng `Jest`. Just run `test` script to run tests
+```
+npm run test
+```
+
 
 ## Code Examples
 
