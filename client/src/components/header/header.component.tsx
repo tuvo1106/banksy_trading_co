@@ -34,9 +34,8 @@ export const Header = ({
 }: HeaderProps): JSX.Element => (
   <div className="header">
     <Link className="logo-container" to="/">
-      <img className="logo" src="banksy.png"/>
+      <img className="logo" src="banksy_tr.png"/>
     </Link>
-    <img className="logo" src="banksy.png"/>
     <div className="options">
       <Link className="option" to="/shop">
         Shop
