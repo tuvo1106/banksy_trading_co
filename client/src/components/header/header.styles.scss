@@ -1,5 +1,5 @@
 .header {
-  height: 70px;
+  height: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -12,7 +12,13 @@
   }
 
   .logo {
-    height: 40px;
+    height: 5.75em;
+    position: absolute;
+    left: 3.5em;
+  }
+
+  .cart-icon {
+    margin-top: 0.7em
   }
 
   .logo-container {
@@ -40,6 +46,8 @@
     .option {
       padding: 10px 15px;
       cursor: pointer;
+      font-size: 20px;
+      margin-top: 1em;
     }
   }
 }
