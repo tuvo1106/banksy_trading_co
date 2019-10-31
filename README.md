@@ -38,6 +38,8 @@ An E-commerce web application for selling men's suits and accessories. This proj
 
 ![Tech Stack](https://i.imgur.com/O2kRTzS.png)
 
+![Packages and libraries](https://i.imgur.com/0ed17Ix.png)
+
 ### GraphQL
 
 
