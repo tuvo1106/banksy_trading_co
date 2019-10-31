@@ -1,5 +1,4 @@
-# Banksy Trading Co.
-   ![Logo](https://i.imgur.com/CvjXmtt.png)
+# ![Logo](https://i.imgur.com/RiQUMyF.png) 
 
 An E-commerce web application for selling men's suits and accessories. This project is created with the MERN (MongoDB, Express, React, Node) stack for Holberton School's 1st Year Foundations final project.
 
