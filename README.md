@@ -1,4 +1,4 @@
-# Banksy Trading Co.
+# ![Logo](https://i.imgur.com/RiQUMyF.png) 
 
 An E-commerce web application for selling men's suits and accessories. This project is created with the MERN (MongoDB, Express, React, Node) stack for Holberton School's 1st Year Foundations final project.
 
@@ -36,7 +36,20 @@ An E-commerce web application for selling men's suits and accessories. This proj
 
 ## Technologies
 
+### Architecture
+
 ![Tech Stack](https://i.imgur.com/O2kRTzS.png)
+
+### Libraries and tools
+
+![Libraries and tools](https://i.imgur.com/0ed17Ix.png)
+
+### GraphQL
+
+GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools. 
+
+We used it as an API to fetch data from our database, which has given us performance benefits
+
 
 ## Setup
 
@@ -44,6 +57,19 @@ An E-commerce web application for selling men's suits and accessories. This proj
 npm install
 npm run launch
 ```
+### Building
+Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as compiler.
+
+```
+npm run build
+```
+
+### Testing
+As a testing frameworking we are uisng `Jest`. Just run `test` script to run tests
+```
+npm run test
+```
+
 
 ## Code Examples
 
