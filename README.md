@@ -57,6 +57,13 @@ We used it as an API to fetch data from our database, which has given us perform
 npm install
 npm run launch
 ```
+### Building
+Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as compiler.
+
+```
+npm run build
+```
+
 
 ## Code Examples
 
