@@ -64,7 +64,7 @@ npm install
 npm run launch
 ```
 
-In order to run GraphQL API to fetch data in [api directory](/api/v2/grapql-server/) run:
+In order to run GraphQL API to fetch data in [api directory](/api/v2/grapql-server/), run:
 ```
 npm install
 npm start
