@@ -2,7 +2,7 @@
 
 An E-commerce web application for selling men's suits and accessories. This project is created with the MERN (MongoDB, Express, React, Node) stack for Holberton School's 1st Year Foundations final project.
 
-Landing page: [Landing page](https://tuvo.dev/banksy_trading_co/)
+Landing page: [here](https://tuvo.dev/banksy_trading_co/)
 ## Table of contents
 
 - [Motivations](#motivations)
