@@ -59,7 +59,7 @@ npm install
 npm run launch
 ```
 ### Building
-Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as compiler.
+Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as a compiler.
 
 ```
 npm run build
@@ -114,7 +114,7 @@ Project is deployed on Heroku!
 
 ## Inspiration
 
-Andrei Neagoie and Yihua Zhang's Intro to React course on Udemy
+Andrei Neagoie and Yihua Zhang's Intro to React course on [Udemy](https://www.udemy.com/course/complete-react-developer-zero-to-mastery/)
 
 ## Contact
 
