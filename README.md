@@ -47,11 +47,9 @@ Landing page: [here](https://tuvo.dev/banksy_trading_co/)
 
 ### GraphQL
 
-GraphQL is a query language for APIs and a runtime for fulfilling those queries with your existing data. GraphQL provides a complete and understandable description of the data in your API, gives clients the power to ask for exactly what they need and nothing more, makes it easier to evolve APIs over time, and enables powerful developer tools. 
+GraphQL is a query language for APIs and a runtime for fulfilling queries with existing data. In our application, we used it as an API to fetch data from our MongoDB database.
 
-We used it as an API to fetch data from our database, which has given us performance benefits.
-
-You can play with GraphQL on the playground [here](https://banksyco.tk/)
+You can play with GraphQL on the playground [here](https://banksyco.tk/).
 
 Here is how playground looks like with `query` example:
 
@@ -65,19 +63,24 @@ npm run launch
 ```
 
 In order to run GraphQL API to fetch data in [api directory](/api/v2/grapql-server/), run:
+
 ```
 npm install
 npm start
 ```
+
 ### Building
-Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as a compiler.
+
+Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as a transpiler.
 
 ```
 npm run build
 ```
 
 ### Testing
-As a testing frameworking we are uisng `Jest`. Just run `test` script to run tests
+
+As a testing frameworking we are usng `Jest`. Just run `test` script to run tests
+
 ```
 npm run test
 ```
