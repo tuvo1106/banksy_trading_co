@@ -51,6 +51,11 @@ GraphQL is a query language for APIs and a runtime for fulfilling those queries 
 
 We used it as an API to fetch data from our database, which has given us performance benefits.
 
+You can play with GraphQL on the playground [here](https://banksyco.tk/)
+
+Here is how playground looks like with `query` example:
+
+![GQL Playground Example](https://i.imgur.com/zCnBdQ8.png)
 
 ## Setup
 
