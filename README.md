@@ -63,6 +63,12 @@ Here is how playground looks like with `query` example:
 npm install
 npm run launch
 ```
+
+In order to run GraphQL API to fetch data in [api directory](/api/v2/grapql-server/) run:
+```
+npm install
+npm start
+```
 ### Building
 Build script will create a `build` directory with a compiled JavaScript code which will be compatible with most modern browsers. We are using `create-react-app` as a strating point in our app, which under the hood uses `babel` as a compiler.
 
