@@ -25,10 +25,12 @@ if (process.env.NODE_ENV === "production") {
 app.use(bodyParse.json())
 app.use(bodyParse.urlencoded({ extended: true }))
 
+// Use CORS policy
 app.use(cors())
 
 // DB Config
-const db = require("./config/keys").mongoURI
+const db = process.env.mongoURI
+console.log("Hello",db)
 
 // Connect to MongoDB
 mongoose
