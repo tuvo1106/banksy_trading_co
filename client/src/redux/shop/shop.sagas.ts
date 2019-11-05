@@ -1,23 +1,18 @@
-import { takeEvery, call, put, all } from "redux-saga/effects"
-import ShopActionTypes from "./shop.types"
-import { createHttpLink } from "apollo-link-http"
-import { InMemoryCache } from "apollo-cache-inmemory"
-import { ApolloClient, gql } from "apollo-boost"
+import { takeEvery, call, put, all } from 'redux-saga/effects'
+import ShopActionTypes from './shop.types'
+import { createHttpLink } from 'apollo-link-http'
+import { InMemoryCache } from 'apollo-cache-inmemory'
+import { ApolloClient, gql } from 'apollo-boost'
 
 import {
   fetchCollectionsSuccess,
   fetchCollectionsFailure
-} from "./shop.actions"
+} from './shop.actions'
 
 export function* fetchCollectionsAsync() {
   try {
-    /* const collectionRef = firestore.collection('collections')
-    const snapshot = yield collectionRef.get()
-    const collectionsMap = yield call(convertCollectionsSnapshotToMap, snapshot)
-    yield put(fetchCollectionsSuccess(collectionsMap)) */
-
     const http = yield createHttpLink({
-       uri: "https://banksyco.tk/"
+      uri: 'https://banksyco.tk/'
     })
     const cache = new InMemoryCache()
     const client = new ApolloClient({
