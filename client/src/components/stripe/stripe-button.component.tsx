@@ -1,7 +1,7 @@
 /* modules */
-import React from "react"
-import StripeCheckout from "react-stripe-checkout"
-import axios from "axios"
+import React from 'react'
+import StripeCheckout from 'react-stripe-checkout'
+import axios from 'axios'
 
 interface StripeCheckoutButtonProps {
   price: number
@@ -23,37 +23,36 @@ const StripeCheckoutButton = ({
   price
 }: StripeCheckoutButtonProps): JSX.Element => {
   const priceForStripe = price * 100
-  const publishableKey = "pk_test_Bh7isiPZWQD9oNPnCObg8iqE00qUmRi4VF"
+  const publishableKey = 'pk_test_Bh7isiPZWQD9oNPnCObg8iqE00qUmRi4VF'
 
-  // pass to backend later
   const onToken = (token: token) => {
     axios({
-      url: "payment",
-      method: "post",
+      url: 'payment',
+      method: 'post',
       data: {
         amount: priceForStripe,
         token
       }
     })
       .then(response => {
-        alert("Payment successful")
+        alert('Payment successful')
       })
       .catch(error => {
-        console.log("Payment error: " + error)
-        alert("There was am issue with your payment.")
+        console.log('Payment error: ' + error)
+        alert('There was am issue with your payment.')
       })
   }
 
   return (
     <StripeCheckout
-      label='Pay Now'
-      name='Banksy Trading Co.'
+      label="Pay Now"
+      name="Banksy Trading Co."
       billingAddress
       shippingAddress
-      image=''
+      image=""
       description={`Your total is $${price}`}
       amount={priceForStripe}
-      panelLabel='Pay Now'
+      panelLabel="Pay Now"
       token={onToken}
       stripeKey={publishableKey}
     />

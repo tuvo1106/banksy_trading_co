@@ -1,16 +1,16 @@
-import firebase from "firebase/app"
-import "firebase/firestore"
-import "firebase/auth"
+import firebase from 'firebase/app'
+import 'firebase/firestore'
+import 'firebase/auth'
 
 const config = {
-  apiKey: "AIzaSyA_53ikiYu-KJy5UUqluGdvKsrwAKCDiv4",
-  authDomain: "banksy-trading-co.firebaseapp.com",
-  databaseURL: "https://banksy-trading-co.firebaseio.com",
-  projectId: "banksy-trading-co",
-  storageBucket: "banksy-trading-co.appspot.com",
-  messagingSenderId: "705074590890",
-  appId: "1:705074590890:web:169548df66e4838cca8cd3",
-  measurementId: "G-ERCQ4GS36D"
+  apiKey: 'AIzaSyA_53ikiYu-KJy5UUqluGdvKsrwAKCDiv4',
+  authDomain: 'banksy-trading-co.firebaseapp.com',
+  databaseURL: 'https://banksy-trading-co.firebaseio.com',
+  projectId: 'banksy-trading-co',
+  storageBucket: 'banksy-trading-co.appspot.com',
+  messagingSenderId: '705074590890',
+  appId: '1:705074590890:web:169548df66e4838cca8cd3',
+  measurementId: 'G-ERCQ4GS36D'
 }
 
 export const createUserProfileDocument = async (
@@ -24,7 +24,6 @@ export const createUserProfileDocument = async (
     const { displayName, email } = userAuth
     const createdAt = new Date()
 
-    // create new user
     try {
       await userRef.set({
         displayName,
@@ -33,7 +32,7 @@ export const createUserProfileDocument = async (
         ...additionalData
       })
     } catch (error) {
-      console.log("error creating user", error.message)
+      console.log('error creating user', error.message)
     }
   }
   return userRef
@@ -47,13 +46,12 @@ export const addCollectionAndDocs = async (
 ): Promise<any> => {
   const collectionRef = firestore.collection(collectionKey)
 
-  // batch write
+  /* batch write */
   const batch = firestore.batch()
   objectsToAdd.forEach(obj => {
     const newDocRef = collectionRef.doc()
     batch.set(newDocRef, obj)
   })
-
   return await batch.commit()
 }
 
@@ -85,9 +83,8 @@ export const getCurrentUser = () => {
 
 export const auth = firebase.auth()
 export const firestore = firebase.firestore()
-
 export const googleProvider = new firebase.auth.GoogleAuthProvider()
-googleProvider.setCustomParameters({ prompt: "select_account" })
+googleProvider.setCustomParameters({ prompt: 'select_account' })
 export const signInWithGoogle = () => auth.signInWithPopup(googleProvider)
 
 export default firebase
