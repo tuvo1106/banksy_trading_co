@@ -17,11 +17,8 @@ import * as serviceWorker from './serviceWorker'
 
 ReactDOM.render(
   <Provider store={store}>
-    {/* global Redux store */}
     <BrowserRouter>
-      {/* Wrapper for React Router */}
       <PersistGate persistor={persistor}>
-        {/* Takes Redux state object and saves it to persisted storage */}
         <App />
       </PersistGate>
     </BrowserRouter>
