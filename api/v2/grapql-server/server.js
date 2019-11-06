@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 require("dotenv/config");
 const Item = require("./schemas/dataSchema");
 
+// Connect to database
 mongoose
   .connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
@@ -11,7 +12,7 @@ mongoose
   .then(con => {
     Item.find((err, res) => {
       if (err) return console.log("err");
-      console.log(Object.values(res));
+      // Define types for each field
       const typeDefs = `
   type Query {
     all: [Items!]!
@@ -34,19 +35,14 @@ mongoose
     price: Int!
   }
 `;
+      // All resolvers in GraphQL server
       const resolvers = {
         Query: {
           all: () => Object.values(res[0].collections)
         }
       };
 
-      // const options = {
-      //   port: 4000,
-      //   endpoint: '/graphql',
-      //   subscriptions: '/subscriptions',
-      //   playground: '/playground',
-      // };
-
+      // Use Graphql-yoga class to create a server
       const server = new GraphQLServer({ typeDefs, resolvers });
       server.start(() => console.log("Server is running on localhost:4000"));
     });
