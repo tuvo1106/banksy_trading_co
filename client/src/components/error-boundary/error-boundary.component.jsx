@@ -1,16 +1,16 @@
-import React, { Component } from "react"
+/* modules */
+import React, { Component } from 'react'
 
+/* styles */
 import {
   ErrorImageOverlay,
   ErrorImageContainer,
   ErrorImageText
-} from "./error-boundary.styles.js"
+} from './error-boundary.styles.js'
 
 class ErrorBoundary extends Component {
-  /* catches all errors in child components */
   constructor() {
     super()
-
     this.state = {
       hasErrored: false
     }
@@ -28,7 +28,7 @@ class ErrorBoundary extends Component {
     if (this.state.hasErrored) {
       return (
         <ErrorImageOverlay>
-          <ErrorImageContainer imageUrl='https://i.imgur.com/A040Lxr.png'></ErrorImageContainer>
+          <ErrorImageContainer imageUrl="https://i.imgur.com/A040Lxr.png"></ErrorImageContainer>
           <ErrorImageText>Sorry, this page is broken!</ErrorImageText>
         </ErrorImageOverlay>
       )

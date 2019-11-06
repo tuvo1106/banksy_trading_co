@@ -1,6 +1,8 @@
-import React from "react"
+/* modules */
+import React from 'react'
 
-import "./form-input.styles.scss"
+/* styles */
+import './form-input.styles.scss'
 
 interface FormInputProps {
   name: string
@@ -17,16 +19,18 @@ const FormInput = ({
   label,
   ...otherProps
 }: FormInputProps): JSX.Element => (
-  <div className='group'>
+  <div className="group">
     <input
-      className='form-input'
+      className="form-input"
       onChange={handleChange}
-      {...otherProps}></input>
+      {...otherProps}
+    ></input>
     {label ? (
       <label
         className={`${
-          otherProps.value.length ? "shrink" : ""
-        } form-input-label`}>
+          otherProps.value.length ? 'shrink' : ''
+        } form-input-label`}
+      >
         {label}
       </label>
     ) : null}
