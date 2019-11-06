@@ -32,7 +32,6 @@ export const SignIn = ({
 
   const handleSubmit = async (event: any): Promise<any> => {
     event.preventDefault()
-
     emailSignInStart(email, password)
   }
 

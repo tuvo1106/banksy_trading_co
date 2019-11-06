@@ -1,8 +1,8 @@
 /* modules */
-import React, { Component } from "react"
+import React, { Component } from 'react'
 
 /* components */
-import Spinner from "../spinner/spinner.component"
+import Spinner from '../spinner/spinner.component'
 
 interface SpinnerProps {
   isLoading: Boolean
