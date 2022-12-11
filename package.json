@@ -25,7 +25,7 @@
     "cors": "2.8.5",
     "dotenv": "7.0.0",
     "ejs": "^2.6.1",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-ejs-layouts": "^2.5.0",
     "express-session": "^1.15.6",
     "express-sslify": "^1.2.0",
