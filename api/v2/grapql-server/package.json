@@ -12,6 +12,6 @@
   "dependencies": {
     "dotenv": "^8.1.0",
     "graphql-yoga": "^1.18.3",
-    "mongoose": "^5.7.5"
+    "mongoose": "^5.13.15"
   }
 }
